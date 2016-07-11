@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8C46A091D34353400CD4A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A081D34353400CD4A93 /* AppDelegate.swift */; };
+		A8C46A0B1D34353400CD4A93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A0A1D34353400CD4A93 /* ViewController.swift */; };
+		A8C46A0E1D34353400CD4A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C46A0C1D34353400CD4A93 /* Main.storyboard */; };
+		A8C46A111D34353500CD4A93 /* Mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A0F1D34353500CD4A93 /* Mercury.xcdatamodeld */; };
+		A8C46A131D34353500CD4A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C46A121D34353500CD4A93 /* Assets.xcassets */; };
+		A8C46A161D34353500CD4A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C46A141D34353500CD4A93 /* LaunchScreen.storyboard */; };
+		A8C46A211D34353500CD4A93 /* MercuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A201D34353500CD4A93 /* MercuryTests.swift */; };
+		A8C46A2C1D34353500CD4A93 /* MercuryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A2B1D34353500CD4A93 /* MercuryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8C46A1D1D34353500CD4A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8C469FD1D34353400CD4A93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8C46A041D34353400CD4A93;
+			remoteInfo = Mercury;
+		};
+		A8C46A281D34353500CD4A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8C469FD1D34353400CD4A93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8C46A041D34353400CD4A93;
+			remoteInfo = Mercury;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A8C46A051D34353400CD4A93 /* Mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C46A081D34353400CD4A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8C46A0A1D34353400CD4A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8C46A0D1D34353400CD4A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8C46A101D34353500CD4A93 /* Mercury.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercury.xcdatamodel; sourceTree = "<group>"; };
+		A8C46A121D34353500CD4A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8C46A151D34353500CD4A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8C46A171D34353500CD4A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C46A1C1D34353500CD4A93 /* MercuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C46A201D34353500CD4A93 /* MercuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryTests.swift; sourceTree = "<group>"; };
+		A8C46A221D34353500CD4A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C46A271D34353500CD4A93 /* MercuryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C46A2B1D34353500CD4A93 /* MercuryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryUITests.swift; sourceTree = "<group>"; };
+		A8C46A2D1D34353500CD4A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8C46A021D34353400CD4A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C46A191D34353500CD4A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C46A241D34353500CD4A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8C469FC1D34353400CD4A93 = {
+			isa = PBXGroup;
+			children = (
+				A8C46A071D34353400CD4A93 /* Mercury */,
+				A8C46A1F1D34353500CD4A93 /* MercuryTests */,
+				A8C46A2A1D34353500CD4A93 /* MercuryUITests */,
+				A8C46A061D34353400CD4A93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8C46A061D34353400CD4A93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8C46A051D34353400CD4A93 /* Mercury.app */,
+				A8C46A1C1D34353500CD4A93 /* MercuryTests.xctest */,
+				A8C46A271D34353500CD4A93 /* MercuryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8C46A071D34353400CD4A93 /* Mercury */ = {
+			isa = PBXGroup;
+			children = (
+				A8C46A081D34353400CD4A93 /* AppDelegate.swift */,
+				A8C46A0A1D34353400CD4A93 /* ViewController.swift */,
+				A8C46A0C1D34353400CD4A93 /* Main.storyboard */,
+				A8C46A121D34353500CD4A93 /* Assets.xcassets */,
+				A8C46A141D34353500CD4A93 /* LaunchScreen.storyboard */,
+				A8C46A171D34353500CD4A93 /* Info.plist */,
+				A8C46A0F1D34353500CD4A93 /* Mercury.xcdatamodeld */,
+			);
+			path = Mercury;
+			sourceTree = "<group>";
+		};
+		A8C46A1F1D34353500CD4A93 /* MercuryTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8C46A201D34353500CD4A93 /* MercuryTests.swift */,
+				A8C46A221D34353500CD4A93 /* Info.plist */,
+			);
+			path = MercuryTests;
+			sourceTree = "<group>";
+		};
+		A8C46A2A1D34353500CD4A93 /* MercuryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8C46A2B1D34353500CD4A93 /* MercuryUITests.swift */,
+				A8C46A2D1D34353500CD4A93 /* Info.plist */,
+			);
+			path = MercuryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8C46A041D34353400CD4A93 /* Mercury */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C46A301D34353500CD4A93 /* Build configuration list for PBXNativeTarget "Mercury" */;
+			buildPhases = (
+				A8C46A011D34353400CD4A93 /* Sources */,
+				A8C46A021D34353400CD4A93 /* Frameworks */,
+				A8C46A031D34353400CD4A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mercury;
+			productName = Mercury;
+			productReference = A8C46A051D34353400CD4A93 /* Mercury.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8C46A1B1D34353500CD4A93 /* MercuryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C46A331D34353500CD4A93 /* Build configuration list for PBXNativeTarget "MercuryTests" */;
+			buildPhases = (
+				A8C46A181D34353500CD4A93 /* Sources */,
+				A8C46A191D34353500CD4A93 /* Frameworks */,
+				A8C46A1A1D34353500CD4A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8C46A1E1D34353500CD4A93 /* PBXTargetDependency */,
+			);
+			name = MercuryTests;
+			productName = MercuryTests;
+			productReference = A8C46A1C1D34353500CD4A93 /* MercuryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A8C46A261D34353500CD4A93 /* MercuryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C46A361D34353500CD4A93 /* Build configuration list for PBXNativeTarget "MercuryUITests" */;
+			buildPhases = (
+				A8C46A231D34353500CD4A93 /* Sources */,
+				A8C46A241D34353500CD4A93 /* Frameworks */,
+				A8C46A251D34353500CD4A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8C46A291D34353500CD4A93 /* PBXTargetDependency */,
+			);
+			name = MercuryUITests;
+			productName = MercuryUITests;
+			productReference = A8C46A271D34353500CD4A93 /* MercuryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8C469FD1D34353400CD4A93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Vikramjeet Singh";
+				TargetAttributes = {
+					A8C46A041D34353400CD4A93 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RA6B62BH5R;
+						DevelopmentTeamName = "Apple Inc. - STC Creative Services";
+						ProvisioningStyle = Automatic;
+					};
+					A8C46A1B1D34353500CD4A93 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RA6B62BH5R;
+						DevelopmentTeamName = "Apple Inc. - STC Creative Services";
+						ProvisioningStyle = Automatic;
+						TestTargetID = A8C46A041D34353400CD4A93;
+					};
+					A8C46A261D34353500CD4A93 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RA6B62BH5R;
+						DevelopmentTeamName = "Apple Inc. - STC Creative Services";
+						ProvisioningStyle = Automatic;
+						TestTargetID = A8C46A041D34353400CD4A93;
+					};
+				};
+			};
+			buildConfigurationList = A8C46A001D34353400CD4A93 /* Build configuration list for PBXProject "Mercury" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8C469FC1D34353400CD4A93;
+			productRefGroup = A8C46A061D34353400CD4A93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8C46A041D34353400CD4A93 /* Mercury */,
+				A8C46A1B1D34353500CD4A93 /* MercuryTests */,
+				A8C46A261D34353500CD4A93 /* MercuryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8C46A031D34353400CD4A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C46A161D34353500CD4A93 /* LaunchScreen.storyboard in Resources */,
+				A8C46A131D34353500CD4A93 /* Assets.xcassets in Resources */,
+				A8C46A0E1D34353400CD4A93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C46A1A1D34353500CD4A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C46A251D34353500CD4A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8C46A011D34353400CD4A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C46A0B1D34353400CD4A93 /* ViewController.swift in Sources */,
+				A8C46A111D34353500CD4A93 /* Mercury.xcdatamodeld in Sources */,
+				A8C46A091D34353400CD4A93 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C46A181D34353500CD4A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C46A211D34353500CD4A93 /* MercuryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C46A231D34353500CD4A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C46A2C1D34353500CD4A93 /* MercuryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8C46A1E1D34353500CD4A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8C46A041D34353400CD4A93 /* Mercury */;
+			targetProxy = A8C46A1D1D34353500CD4A93 /* PBXContainerItemProxy */;
+		};
+		A8C46A291D34353500CD4A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8C46A041D34353400CD4A93 /* Mercury */;
+			targetProxy = A8C46A281D34353500CD4A93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8C46A0C1D34353400CD4A93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8C46A0D1D34353400CD4A93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8C46A141D34353500CD4A93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8C46A151D34353500CD4A93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8C46A2E1D34353500CD4A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8C46A2F1D34353500CD4A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8C46A311D34353500CD4A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mercury/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.Mercury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A8C46A321D34353500CD4A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mercury/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.Mercury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A8C46A341D34353500CD4A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MercuryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mercury.app/Mercury";
+			};
+			name = Debug;
+		};
+		A8C46A351D34353500CD4A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MercuryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mercury.app/Mercury";
+			};
+			name = Release;
+		};
+		A8C46A371D34353500CD4A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MercuryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Mercury;
+			};
+			name = Debug;
+		};
+		A8C46A381D34353500CD4A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MercuryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Mercury;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8C46A001D34353400CD4A93 /* Build configuration list for PBXProject "Mercury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C46A2E1D34353500CD4A93 /* Debug */,
+				A8C46A2F1D34353500CD4A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8C46A301D34353500CD4A93 /* Build configuration list for PBXNativeTarget "Mercury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C46A311D34353500CD4A93 /* Debug */,
+				A8C46A321D34353500CD4A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A8C46A331D34353500CD4A93 /* Build configuration list for PBXNativeTarget "MercuryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C46A341D34353500CD4A93 /* Debug */,
+				A8C46A351D34353500CD4A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A8C46A361D34353500CD4A93 /* Build configuration list for PBXNativeTarget "MercuryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C46A371D34353500CD4A93 /* Debug */,
+				A8C46A381D34353500CD4A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A8C46A0F1D34353500CD4A93 /* Mercury.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A8C46A101D34353500CD4A93 /* Mercury.xcdatamodel */,
+			);
+			currentVersion = A8C46A101D34353500CD4A93 /* Mercury.xcdatamodel */;
+			path = Mercury.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A8C469FD1D34353400CD4A93 /* Project object */;
+}
