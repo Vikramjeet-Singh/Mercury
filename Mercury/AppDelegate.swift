@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupAppearance()
+        
         return true
     }
 
@@ -42,6 +45,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    private func setupAppearance() {
+        UITabBar.appearance().barTintColor = .mercury()
+        UITabBar.appearance().tintColor = .white()
+        UITabBar.appearance().barStyle = .black
+        
+        UINavigationBar.appearance().barTintColor = .mercury()
+        UINavigationBar.appearance().tintColor = .white()
+        UINavigationBar.appearance().barStyle = .black
+        
+        UIToolbar.appearance().barTintColor = .mercury()
+        UIToolbar.appearance().tintColor = .white()
+        UIToolbar.appearance().barStyle = .black
     }
 
     // MARK: - Core Data stack
@@ -88,6 +105,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 
