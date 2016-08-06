@@ -23,27 +23,13 @@ protocol StretchableHeader {
 
 final class MatchViewController: UIViewController, StretchableHeader {
     
-    private var headerFrame: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0) {
-        didSet {
-            tableView.tableHeaderView?.frame = self.headerFrame
-        }
-    }
-
-    private(set) lazy var stretchyView: StretchyView = {
-        return StretchyView(headerView: self.header,
-                            frame: self.headerFrame,
-                            tableView: self.tableView)
-    }()
-    
-    private(set) var pageController: PageController<MatchImageViewController>!
-    
     @IBOutlet private weak var header: UIView!
     @IBOutlet private weak var containerView: UIView! {
         didSet {
             self.pageController = PageController(storyboard: self.storyboard!) { [unowned self] page in
-                            self.pageControl.currentPage = page
-                        }
-
+                self.pageControl.currentPage = page
+            }
+            
             addChildViewController(pageController)
             pageController.view.frame = CGRect(x: 0, y: 0, width: containerView.frame.size.width, height: containerView.frame.size.height)
             containerView.addSubview(pageController.view)
@@ -63,6 +49,20 @@ final class MatchViewController: UIViewController, StretchableHeader {
             pageControl.addTarget(self, action: #selector(MatchViewController.updatePage(_:)), for: .valueChanged)
         }
     }
+    
+    private var headerFrame: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0) {
+        didSet {
+            tableView.tableHeaderView?.frame = self.headerFrame
+        }
+    }
+
+    private(set) lazy var stretchyView: StretchyView = {
+        return StretchyView(headerView: self.header,
+                            frame: self.headerFrame,
+                            tableView: self.tableView)
+    }()
+    
+    private(set) var pageController: PageController<MatchImageViewController>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
