@@ -23,7 +23,7 @@ extension ViewType: CustomStringConvertible {
     var keyboardOffset: CGFloat {
         switch self {
         case .signUp: return 50.0
-        case .logIn: return 100.0
+        case .logIn: return 50.0
         }
     }
     
@@ -33,11 +33,18 @@ extension ViewType: CustomStringConvertible {
         case .logIn: return true
         }
     }
+    
+    var showUsername: Bool {
+        switch self {
+        case .signUp: return true
+        case .logIn: return false
+        }
+    }
 }
 
 final class AuthorizationViewController: UIViewController, AuthorizableView {
-    var authView: ViewType = .logIn
-    var keyboardOffset: CGFloat = 0.0
+    private(set) var authView: ViewType = .logIn
+    private var dismissCallback: () -> Void = { _ in }
     
     //Animate view to adjust to keyboard
     lazy var animate: (Double, UInt, CGRect) -> () = {
@@ -50,8 +57,21 @@ final class AuthorizationViewController: UIViewController, AuthorizableView {
         })
     }
     
+    @IBOutlet private weak var logo: RoundedImageView!
+    
+    @IBOutlet private weak var username: UITextField!
+    @IBOutlet private weak var password: UITextField!
+    @IBOutlet private weak var email: UITextField!
+
     @IBOutlet weak private var logIn: UIButton!
     @IBOutlet weak private var recover: UIButton!
+    
+    static func create(viewType: ViewType, dismissCallback: () -> Void) -> AuthorizationViewController {
+        let authVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: AuthorizationViewController.storyboardIdentifier) as! AuthorizationViewController
+        authVC.authView = viewType
+        authVC.dismissCallback = dismissCallback
+        return authVC
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +79,7 @@ final class AuthorizationViewController: UIViewController, AuthorizableView {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(AuthorizationViewController.dismissKeyboard)))
         
         // Set up authorization view
-        logIn.setTitle(buttonTitle, for: .normal)
-        recover.isHidden = !canRecover
+        configureView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +96,67 @@ final class AuthorizationViewController: UIViewController, AuthorizableView {
         super.viewWillDisappear(animated)
         // Unregister for Keyboard notifications
         self.unregisterFromKeyboardNotifications()
+    }
+    
+    @IBAction func authenticate(_ sender: UIButton) {
+        switch authView {
+        case .logIn:
+            logIn(sender)
+        case .signUp:
+            signUp(sender)
+        }
+    }
+    
+    func configureView() {
+        logIn.setTitle(buttonTitle, for: .normal)
+        recover.isHidden = !canRecover
+        username.isHidden = !showUsername
+    }
+}
+
+private extension AuthorizationViewController {
+    private func logIn(_ sender: UIButton) {
+        dismissKeyboard()
+        
+        guard let email = self.email.text,
+            let password = self.password.text else { return }
+        
+        do {
+            try User.signIn(email: email,
+                            password: password,
+                            completion: { userResult in
+                                // guard let user = userResult.value.flatMap({$0})
+                                guard let error = userResult.error else {
+                                    return self.dismissCallback()
+                                }
+                                print("Error during authorization : \(error)")
+                            })
+        } catch {
+            print("Error during user creation : \(error)")
+        }
+    }
+    
+    private func signUp(_ sender: UIButton) {
+        dismissKeyboard()
+        
+        guard let email = self.email.text,
+            let username = self.username.text,
+            let password = self.password.text else { return }
+        
+        do {
+            try User.createUser(email: email,
+                                password: password,
+                                username: username,
+                                completion: { userResult in
+                                    // guard let user = userResult.value.flatMap({$0})
+                                    guard let error = userResult.error else {
+                                        return self.dismissCallback()
+                                    }
+                                    print("Error during authorization : \(error)")
+                            })
+        } catch {
+            print("Error during user creation : \(error)")
+        }
     }
 }
 

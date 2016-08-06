@@ -1,0 +1,908 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D6A85383453D3E6305ADAB7E1F9BAAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		40BACE4649D05A32985B43BCC644A64E /* Pods-Mercury-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0174519C1578F6CF3DF8C3F039B283E7 /* Pods-Mercury-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45D0512877A746F5745247A265748874 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		5A4D376A79AF813FA27864AE3954B914 /* Pods-MercuryUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F9205A92586A6D42DAEAD00FE8E6831 /* Pods-MercuryUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D496340BDE3021C803451EE5D7C115B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		79DF9592C79765D57DB776E2692E37F7 /* Pods-Mercury-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00511016D62AB3AE4428394119D5BB51 /* Pods-Mercury-dummy.m */; };
+		93200D578B42E319045EF78A4845BAC3 /* Pods-MercuryTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6337AB24CD3BDDEE45B24F19869887F5 /* Pods-MercuryTests-dummy.m */; };
+		BBFF8B514DDA9787EC89432310DB263A /* Pods-MercuryTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B742D0278CC8177B921808B937FEBCB /* Pods-MercuryTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4429510B507687EEBAEB1466C9E7FEA /* Pods-MercuryUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F15819E658FA57165CE367CFABED3FA7 /* Pods-MercuryUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00511016D62AB3AE4428394119D5BB51 /* Pods-Mercury-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mercury-dummy.m"; sourceTree = "<group>"; };
+		0138FDE6D16D06F62B94E0FCE5CDC429 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		0174519C1578F6CF3DF8C3F039B283E7 /* Pods-Mercury-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mercury-umbrella.h"; sourceTree = "<group>"; };
+		0E831C1F602892B99AF1F0324ED329A7 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		13B72B556CA38F7227049B7723D5867E /* Pods-MercuryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MercuryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1BE5D27397145994875FC4415BD2865C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27F5F10765E6DDAACDEDC374283650AD /* Pods-MercuryTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MercuryTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2AA4A0119D2A3F34C51C6FE0AECD3FC7 /* Pods_MercuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6B5BD0997929D820FACF3C065C4380 /* Pods-MercuryUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MercuryUITests-resources.sh"; sourceTree = "<group>"; };
+		31786E1C097ADF0489141D5303CA60E6 /* Pods-MercuryTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MercuryTests-resources.sh"; sourceTree = "<group>"; };
+		330A95CEA6A599291E68F8DAAB7398D4 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		3A06F4C5C25C4F43E042D376CB3DD59F /* Pods-Mercury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mercury.release.xcconfig"; sourceTree = "<group>"; };
+		407E63287736000F85C4709079291A67 /* Pods-MercuryTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MercuryTests.modulemap"; sourceTree = "<group>"; };
+		4095891EBE121E57D6F35AF1BB401E42 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		493784359F04E6CF37EDD195C8257547 /* Pods-MercuryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MercuryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4CCCCE911ACFF38F2E7945462AC1325E /* Pods-Mercury-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mercury-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50B9D0473C864D8CF60BB469E8DC639C /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		55AE203C9D93BB2304D80F8F32147247 /* FIRMessaging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessaging.h; path = Headers/Public/FIRMessaging.h; sourceTree = "<group>"; };
+		582EF96E53312631A8E8120F3B19BF39 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		5F170804C04873D269FA60F32AD8D7FD /* Pods-MercuryUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MercuryUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5F88B37AFE8EE74D229BC648C869F0D1 /* Pods-MercuryTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MercuryTests-frameworks.sh"; sourceTree = "<group>"; };
+		6337AB24CD3BDDEE45B24F19869887F5 /* Pods-MercuryTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MercuryTests-dummy.m"; sourceTree = "<group>"; };
+		68362222F5586D00B3001FCA869F9C46 /* GoogleParsingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleParsingUtilities.framework; path = Frameworks/GoogleParsingUtilities.framework; sourceTree = "<group>"; };
+		6BF879824BEF8D0E17D95BF0B87C5838 /* GoogleIPhoneUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleIPhoneUtilities.framework; path = Frameworks/GoogleIPhoneUtilities.framework; sourceTree = "<group>"; };
+		6CE1B7789213055AF210B2783FD2206C /* Pods-Mercury-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mercury-frameworks.sh"; sourceTree = "<group>"; };
+		71C8E523A67039877817108054F2FAC1 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		738859C03F4679626C45EC334E02DB57 /* Pods-MercuryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MercuryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76305FB2D5ECE7C8934A6B2DF80EC277 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Frameworks/FirebaseMessaging.framework; sourceTree = "<group>"; };
+		7B742D0278CC8177B921808B937FEBCB /* Pods-MercuryTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MercuryTests-umbrella.h"; sourceTree = "<group>"; };
+		7F9205A92586A6D42DAEAD00FE8E6831 /* Pods-MercuryUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MercuryUITests-umbrella.h"; sourceTree = "<group>"; };
+		839DE1682E0E82ECD37D22BD5DDDCB68 /* Pods-MercuryUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MercuryUITests-frameworks.sh"; sourceTree = "<group>"; };
+		89F8883E30641AF556BA9849EE5C6C3A /* Pods-Mercury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mercury.debug.xcconfig"; sourceTree = "<group>"; };
+		8A03E6656B718B2C2366C43B30957F8C /* Pods-MercuryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MercuryTests.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A628696F6B233C5AD907B73FC3FE82B /* Pods-Mercury-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mercury-resources.sh"; sourceTree = "<group>"; };
+		A41F12AE36526A098E565B303BA91442 /* Pods_MercuryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercuryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5010CAF063E19AE9FEEAAEE070C1353 /* Pods-Mercury-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mercury-acknowledgements.plist"; sourceTree = "<group>"; };
+		ACE2D7395AB790F094969919FBE587BC /* Pods-Mercury.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Mercury.modulemap"; sourceTree = "<group>"; };
+		AD10BCFDD3EDC03CD4713DD693225B0E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8D95EB3C0915CE9B62B7116ECC32F5C /* Pods_Mercury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDAD605D888ABCD1FE31F4534F5A8E58 /* Pods-MercuryUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MercuryUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C1C81F4A5DB0F0B6920195CC3A0927C0 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D85E41B17EDB236B1895A08F64155694 /* FirebaseCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCrash.framework; path = Frameworks/FirebaseCrash.framework; sourceTree = "<group>"; };
+		DBE376ED815E07A62ECCE3124DDBA254 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		E14E298AA43CB800DD8EF690BD3E0FE4 /* Pods-MercuryTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MercuryTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		ECAEC04175BEB4F6FDBACAB6E9CB06EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15819E658FA57165CE367CFABED3FA7 /* Pods-MercuryUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MercuryUITests-dummy.m"; sourceTree = "<group>"; };
+		F4C130B894CB6205A6E4660BA8619CB0 /* Pods-MercuryUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MercuryUITests.modulemap"; sourceTree = "<group>"; };
+		F9EA08CF70388FE2D0B0409F62868A45 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		FF4F2846927071144ECB649FBA41B2F8 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05914915A2F209479852B6029CD69F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6A85383453D3E6305ADAB7E1F9BAAC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		483FAF3018D41131C4276D3B320831E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D0512877A746F5745247A265748874 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABFD7CB435A21B5CA9B106476609F7B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D496340BDE3021C803451EE5D7C115B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09F46A2949E30D14D64515BE8A09E80B /* FirebaseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				C58A1E9E46340D0461F71524177A52CB /* Frameworks */,
+			);
+			path = FirebaseStorage;
+			sourceTree = "<group>";
+		};
+		0F670C93145A3D1545692BF277191958 /* Pods-Mercury */ = {
+			isa = PBXGroup;
+			children = (
+				AD10BCFDD3EDC03CD4713DD693225B0E /* Info.plist */,
+				ACE2D7395AB790F094969919FBE587BC /* Pods-Mercury.modulemap */,
+				4CCCCE911ACFF38F2E7945462AC1325E /* Pods-Mercury-acknowledgements.markdown */,
+				A5010CAF063E19AE9FEEAAEE070C1353 /* Pods-Mercury-acknowledgements.plist */,
+				00511016D62AB3AE4428394119D5BB51 /* Pods-Mercury-dummy.m */,
+				6CE1B7789213055AF210B2783FD2206C /* Pods-Mercury-frameworks.sh */,
+				9A628696F6B233C5AD907B73FC3FE82B /* Pods-Mercury-resources.sh */,
+				0174519C1578F6CF3DF8C3F039B283E7 /* Pods-Mercury-umbrella.h */,
+				89F8883E30641AF556BA9849EE5C6C3A /* Pods-Mercury.debug.xcconfig */,
+				3A06F4C5C25C4F43E042D376CB3DD59F /* Pods-Mercury.release.xcconfig */,
+			);
+			name = "Pods-Mercury";
+			path = "Target Support Files/Pods-Mercury";
+			sourceTree = "<group>";
+		};
+		10B064F1D7257E077F5D31425F2937F3 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				2F39EB07A1626B3EAFFE14229C777D2B /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		230C10FBD7D34615BC6DD21DC83C6D90 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				71ADDE3600B28B4426ECC87C9B19E4B7 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		2853BD053E2F49E42EB5EBA912224312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4095891EBE121E57D6F35AF1BB401E42 /* FirebaseAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		296229ECEDEB2FB85B3F2893D02F9C0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BF879824BEF8D0E17D95BF0B87C5838 /* GoogleIPhoneUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F39EB07A1626B3EAFFE14229C777D2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71C8E523A67039877817108054F2FAC1 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5B2473656D7C1CD4F55982A698176A3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9EA08CF70388FE2D0B0409F62868A45 /* GoogleNetworkingUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E000DC190C578A257B34CA0147A2F74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76305FB2D5ECE7C8934A6B2DF80EC277 /* FirebaseMessaging.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60659CD69E87BFC3C43A6593E99BE04A /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				5B2473656D7C1CD4F55982A698176A3B /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		71ADDE3600B28B4426ECC87C9B19E4B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBE376ED815E07A62ECCE3124DDBA254 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B67EC2C51090015CD55FD29AEEB3409B /* Pods */,
+				BBA91C6F75DAA2AF76FA6A8C912A180E /* Products */,
+				AED671C6E1B0873D37B72EBCDF454BE0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		800326EAD702623C4FAF6AD3E930EDF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D85E41B17EDB236B1895A08F64155694 /* FirebaseCrash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		869F5E3437ECDB47A9CFB5F7C955A431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				582EF96E53312631A8E8120F3B19BF39 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		957AF647943D515F67044ED46F9E6287 /* Pods-MercuryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BE5D27397145994875FC4415BD2865C /* Info.plist */,
+				F4C130B894CB6205A6E4660BA8619CB0 /* Pods-MercuryUITests.modulemap */,
+				BDAD605D888ABCD1FE31F4534F5A8E58 /* Pods-MercuryUITests-acknowledgements.markdown */,
+				5F170804C04873D269FA60F32AD8D7FD /* Pods-MercuryUITests-acknowledgements.plist */,
+				F15819E658FA57165CE367CFABED3FA7 /* Pods-MercuryUITests-dummy.m */,
+				839DE1682E0E82ECD37D22BD5DDDCB68 /* Pods-MercuryUITests-frameworks.sh */,
+				2E6B5BD0997929D820FACF3C065C4380 /* Pods-MercuryUITests-resources.sh */,
+				7F9205A92586A6D42DAEAD00FE8E6831 /* Pods-MercuryUITests-umbrella.h */,
+				13B72B556CA38F7227049B7723D5867E /* Pods-MercuryUITests.debug.xcconfig */,
+				493784359F04E6CF37EDD195C8257547 /* Pods-MercuryUITests.release.xcconfig */,
+			);
+			name = "Pods-MercuryUITests";
+			path = "Target Support Files/Pods-MercuryUITests";
+			sourceTree = "<group>";
+		};
+		98993AFDB84BBB6840F683666A7360F7 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D9B0D7546E172C0C9EC15393EB5FEFB8 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		A353E42957F62E545C6B9509C3E753B2 /* GoogleIPhoneUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				296229ECEDEB2FB85B3F2893D02F9C0F /* Frameworks */,
+			);
+			path = GoogleIPhoneUtilities;
+			sourceTree = "<group>";
+		};
+		A3F99BE5B0B9AEBAD3DE4FCB434469BE /* Pods-MercuryTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECAEC04175BEB4F6FDBACAB6E9CB06EC /* Info.plist */,
+				407E63287736000F85C4709079291A67 /* Pods-MercuryTests.modulemap */,
+				27F5F10765E6DDAACDEDC374283650AD /* Pods-MercuryTests-acknowledgements.markdown */,
+				E14E298AA43CB800DD8EF690BD3E0FE4 /* Pods-MercuryTests-acknowledgements.plist */,
+				6337AB24CD3BDDEE45B24F19869887F5 /* Pods-MercuryTests-dummy.m */,
+				5F88B37AFE8EE74D229BC648C869F0D1 /* Pods-MercuryTests-frameworks.sh */,
+				31786E1C097ADF0489141D5303CA60E6 /* Pods-MercuryTests-resources.sh */,
+				7B742D0278CC8177B921808B937FEBCB /* Pods-MercuryTests-umbrella.h */,
+				738859C03F4679626C45EC334E02DB57 /* Pods-MercuryTests.debug.xcconfig */,
+				8A03E6656B718B2C2366C43B30957F8C /* Pods-MercuryTests.release.xcconfig */,
+			);
+			name = "Pods-MercuryTests";
+			path = "Target Support Files/Pods-MercuryTests";
+			sourceTree = "<group>";
+		};
+		ACE2B42595C9C63AD7DEB3D761C00337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E831C1F602892B99AF1F0324ED329A7 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AED671C6E1B0873D37B72EBCDF454BE0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F670C93145A3D1545692BF277191958 /* Pods-Mercury */,
+				A3F99BE5B0B9AEBAD3DE4FCB434469BE /* Pods-MercuryTests */,
+				957AF647943D515F67044ED46F9E6287 /* Pods-MercuryUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B6084F5F41C1969138497B66F633CDAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1C81F4A5DB0F0B6920195CC3A0927C0 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B67EC2C51090015CD55FD29AEEB3409B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98993AFDB84BBB6840F683666A7360F7 /* Firebase */,
+				10B064F1D7257E077F5D31425F2937F3 /* FirebaseAnalytics */,
+				F87E275FF0B8F306B8EC4DCD8CABCE6C /* FirebaseAuth */,
+				EF6CC8FF80BDB83371B640514F714803 /* FirebaseCrash */,
+				F968A02F7038BF1F708C09089AB518CF /* FirebaseDatabase */,
+				FE1F1DBEE05828D9DE6AF1B6A31D874D /* FirebaseInstanceID */,
+				D9C92792AF02B6BF7038F783ACABA9E4 /* FirebaseMessaging */,
+				09F46A2949E30D14D64515BE8A09E80B /* FirebaseStorage */,
+				B8A3BDB838B1D3AE77CE78A23213F073 /* GoogleInterchangeUtilities */,
+				A353E42957F62E545C6B9509C3E753B2 /* GoogleIPhoneUtilities */,
+				60659CD69E87BFC3C43A6593E99BE04A /* GoogleNetworkingUtilities */,
+				E573969F1F053C77FF7CA60E1D7C601A /* GoogleParsingUtilities */,
+				D8822C287E1874FA5FD206F6D18F2DC9 /* GoogleSymbolUtilities */,
+				230C10FBD7D34615BC6DD21DC83C6D90 /* GoogleUtilities */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8A3BDB838B1D3AE77CE78A23213F073 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				869F5E3437ECDB47A9CFB5F7C955A431 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		BBA91C6F75DAA2AF76FA6A8C912A180E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8D95EB3C0915CE9B62B7116ECC32F5C /* Pods_Mercury.framework */,
+				A41F12AE36526A098E565B303BA91442 /* Pods_MercuryTests.framework */,
+				2AA4A0119D2A3F34C51C6FE0AECD3FC7 /* Pods_MercuryUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C58A1E9E46340D0461F71524177A52CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF4F2846927071144ECB649FBA41B2F8 /* FirebaseStorage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D84431BD0969F7D9E06CA5B0C3E78703 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				330A95CEA6A599291E68F8DAAB7398D4 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8822C287E1874FA5FD206F6D18F2DC9 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				B6084F5F41C1969138497B66F633CDAE /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		D9B0D7546E172C0C9EC15393EB5FEFB8 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				50B9D0473C864D8CF60BB469E8DC639C /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		D9C92792AF02B6BF7038F783ACABA9E4 /* FirebaseMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				55AE203C9D93BB2304D80F8F32147247 /* FIRMessaging.h */,
+				5E000DC190C578A257B34CA0147A2F74 /* Frameworks */,
+			);
+			path = FirebaseMessaging;
+			sourceTree = "<group>";
+		};
+		E573969F1F053C77FF7CA60E1D7C601A /* GoogleParsingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E5DD3E23B795D984569FED49B4A0E32F /* Frameworks */,
+			);
+			path = GoogleParsingUtilities;
+			sourceTree = "<group>";
+		};
+		E5DD3E23B795D984569FED49B4A0E32F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68362222F5586D00B3001FCA869F9C46 /* GoogleParsingUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF6CC8FF80BDB83371B640514F714803 /* FirebaseCrash */ = {
+			isa = PBXGroup;
+			children = (
+				800326EAD702623C4FAF6AD3E930EDF6 /* Frameworks */,
+			);
+			path = FirebaseCrash;
+			sourceTree = "<group>";
+		};
+		F87E275FF0B8F306B8EC4DCD8CABCE6C /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				2853BD053E2F49E42EB5EBA912224312 /* Frameworks */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		F968A02F7038BF1F708C09089AB518CF /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				ACE2B42595C9C63AD7DEB3D761C00337 /* Frameworks */,
+			);
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		FE1F1DBEE05828D9DE6AF1B6A31D874D /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				0138FDE6D16D06F62B94E0FCE5CDC429 /* FIRInstanceID.h */,
+				D84431BD0969F7D9E06CA5B0C3E78703 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		684A39896275B45AAE05DE0311616A1A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBFF8B514DDA9787EC89432310DB263A /* Pods-MercuryTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D87B9C6FC3E3B517A92B4A5E15710A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40BACE4649D05A32985B43BCC644A64E /* Pods-Mercury-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6264A60722786DF64D8303502A8C1D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4D376A79AF813FA27864AE3954B914 /* Pods-MercuryUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5E83F2652487C9273E97BBA7907C2493 /* Pods-Mercury */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C94AC89158438385A7CA6E79D32785B /* Build configuration list for PBXNativeTarget "Pods-Mercury" */;
+			buildPhases = (
+				E3C684300952F92B52332E3761BFFAAF /* Sources */,
+				ABFD7CB435A21B5CA9B106476609F7B5 /* Frameworks */,
+				95D87B9C6FC3E3B517A92B4A5E15710A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Mercury";
+			productName = "Pods-Mercury";
+			productReference = B8D95EB3C0915CE9B62B7116ECC32F5C /* Pods_Mercury.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		74066D4130B6A6A286175C27F4C63402 /* Pods-MercuryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68674AC0CDEC98FF4170ABBEC9B377E8 /* Build configuration list for PBXNativeTarget "Pods-MercuryTests" */;
+			buildPhases = (
+				E7FA88535B0FFE77F788512F71D04BEC /* Sources */,
+				483FAF3018D41131C4276D3B320831E6 /* Frameworks */,
+				684A39896275B45AAE05DE0311616A1A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MercuryTests";
+			productName = "Pods-MercuryTests";
+			productReference = A41F12AE36526A098E565B303BA91442 /* Pods_MercuryTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F1D04AE394642BAFDB5F65FB83C58E78 /* Pods-MercuryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD73F961731245F60F0607A30B5AEA5 /* Build configuration list for PBXNativeTarget "Pods-MercuryUITests" */;
+			buildPhases = (
+				A7C922A2163EC24A918470FBC17FFD2F /* Sources */,
+				05914915A2F209479852B6029CD69F02 /* Frameworks */,
+				D6264A60722786DF64D8303502A8C1D5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MercuryUITests";
+			productName = "Pods-MercuryUITests";
+			productReference = 2AA4A0119D2A3F34C51C6FE0AECD3FC7 /* Pods_MercuryUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BBA91C6F75DAA2AF76FA6A8C912A180E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E83F2652487C9273E97BBA7907C2493 /* Pods-Mercury */,
+				74066D4130B6A6A286175C27F4C63402 /* Pods-MercuryTests */,
+				F1D04AE394642BAFDB5F65FB83C58E78 /* Pods-MercuryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7C922A2163EC24A918470FBC17FFD2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4429510B507687EEBAEB1466C9E7FEA /* Pods-MercuryUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3C684300952F92B52332E3761BFFAAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79DF9592C79765D57DB776E2692E37F7 /* Pods-Mercury-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7FA88535B0FFE77F788512F71D04BEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93200D578B42E319045EF78A4845BAC3 /* Pods-MercuryTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		22FDBA9E00867DCDE0DBDF03946F1BC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13B72B556CA38F7227049B7723D5867E /* Pods-MercuryUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MercuryUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MercuryUITests/Pods-MercuryUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MercuryUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		42287DDF97330524BA3EF220F0276DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		733E48ED493B6C3A8DF7D69F38659508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A06F4C5C25C4F43E042D376CB3DD59F /* Pods-Mercury.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mercury/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mercury/Pods-Mercury.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Mercury;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A9B71E295B7B7AC831EFD0ED910CB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F8883E30641AF556BA9849EE5C6C3A /* Pods-Mercury.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mercury/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mercury/Pods-Mercury.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Mercury;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE896AB0B90EC166527160F51B512497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A03E6656B718B2C2366C43B30957F8C /* Pods-MercuryTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MercuryTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MercuryTests/Pods-MercuryTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MercuryTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE9439C22469D35336242DD983DB5C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F45538A2D4092D4E08EFBE8A76FBFE12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 738859C03F4679626C45EC334E02DB57 /* Pods-MercuryTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MercuryTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MercuryTests/Pods-MercuryTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MercuryTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF926BF030586A44EB3272B7C664E748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493784359F04E6CF37EDD195C8257547 /* Pods-MercuryUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MercuryUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MercuryUITests/Pods-MercuryUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MercuryUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C94AC89158438385A7CA6E79D32785B /* Build configuration list for PBXNativeTarget "Pods-Mercury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A9B71E295B7B7AC831EFD0ED910CB58 /* Debug */,
+				733E48ED493B6C3A8DF7D69F38659508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9439C22469D35336242DD983DB5C5F /* Debug */,
+				42287DDF97330524BA3EF220F0276DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68674AC0CDEC98FF4170ABBEC9B377E8 /* Build configuration list for PBXNativeTarget "Pods-MercuryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F45538A2D4092D4E08EFBE8A76FBFE12 /* Debug */,
+				AE896AB0B90EC166527160F51B512497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBD73F961731245F60F0607A30B5AEA5 /* Build configuration list for PBXNativeTarget "Pods-MercuryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22FDBA9E00867DCDE0DBDF03946F1BC3 /* Debug */,
+				FF926BF030586A44EB3272B7C664E748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -10,8 +10,6 @@ import UIKit
 
 //MARK: - KeyboardListener protocol
 @objc protocol KeyboardListener {
-    var keyboardOffset: CGFloat { get }
-    
     func keyboardWillShow(_ notification: Notification)
     func keyboardWillHide(_ notification: Notification)
 }
@@ -38,6 +36,7 @@ enum KeyboardDirection {
 }
 
 protocol KeyboardAnimator: KeyboardListener {
+    var keyboardOffset: CGFloat { get }
     var animate: (Double, UInt, CGRect) -> () { get set }
 }
 
@@ -50,8 +49,8 @@ extension KeyboardAnimator where Self: UIViewController {
      */
     func animateView(_ notification: Notification, direction: KeyboardDirection) {
         if let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double,
-            animationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? UInt,
-            newFrame = getNewViewFrame(forKeyboardDirection: direction)
+            let animationCurve = notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? UInt,
+            let newFrame = getNewViewFrame(forKeyboardDirection: direction)
         {
             animate(duration, animationCurve, newFrame)
         }
@@ -69,14 +68,17 @@ extension KeyboardAnimator where Self: UIViewController {
                 newFrame.origin.y += keyboardOffset
             }
         } else if case KeyboardDirection.down = direction {
-            newFrame.origin.y -= keyboardOffset
+            if view.bounds.origin.y != 0 {
+                newFrame.origin.y -= keyboardOffset
+            }
         }
         return newFrame
     }
 }
 
 protocol AuthorizableView: KeyboardAnimator {
-    var authView: ViewType { get set }
+    var authView: ViewType { get }
+    func configureView()
 }
 
 extension AuthorizableView {
@@ -91,4 +93,15 @@ extension AuthorizableView {
     var keyboardOffset: CGFloat {
         return authView.keyboardOffset
     }
+    
+    var showUsername: Bool {
+        return authView.showUsername
+    }
+}
+
+protocol Injectable {
+    associatedtype Item
+    
+    func inject(_: Item)
+    func assertDependencies()
 }

@@ -8,18 +8,21 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        setupAppearance()
+        // Configure Firebase
+        FIRApp.configure()
         
+        // Configure app appearance
+        setupAppearance()
         return true
     }
 
@@ -48,13 +51,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupAppearance() {
+        
         UITabBar.appearance().barTintColor = .mercury()
         UITabBar.appearance().tintColor = .white()
         UITabBar.appearance().barStyle = .black
         
+        UINavigationBar.appearance().barStyle = .black
         UINavigationBar.appearance().barTintColor = .mercury()
         UINavigationBar.appearance().tintColor = .white()
-        UINavigationBar.appearance().barStyle = .black
         
         UIToolbar.appearance().barTintColor = .mercury()
         UIToolbar.appearance().tintColor = .white()

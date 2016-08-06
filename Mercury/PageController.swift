@@ -90,7 +90,7 @@ private extension PageController {
         if index % 2 == 0 {
             pageContentViewController.setUp(content: "Logo.png", pageIndex: index)
         } else {
-            pageContentViewController.setUp(content: "Sample.png", pageIndex: index)
+            pageContentViewController.setUp(content: "Cat_1.png", pageIndex: index)
         }
         contentControllers.append(pageContentViewController)
         return pageContentViewController

@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4D0258B71EA7A94AC866E2 /* Pods_MercuryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D04CCCA6A0232FF21F905C /* Pods_MercuryTests.framework */; };
 		A81FF2961D3DF1A700780666 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FF2951D3DF1A700780666 /* InfoCell.swift */; };
 		A81FF2981D3DF1B600780666 /* InterestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FF2971D3DF1B600780666 /* InterestsCell.swift */; };
 		A81FF29A1D3DF1F100780666 /* UITableViewCell + Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FF2991D3DF1F100780666 /* UITableViewCell + Reusable.swift */; };
 		A81FF29C1D3DFBB000780666 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FF29B1D3DFBB000780666 /* MatchViewController.swift */; };
-		A8973A551D346B9700F05B34 /* UIColor + mercury.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8973A541D346B9700F05B34 /* UIColor + mercury.swift */; };
+		A82194EB1D4960360040B91E /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82194EA1D4960360040B91E /* ErrorHandling.swift */; };
+		A82194ED1D4961C30040B91E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82194EC1D4961C30040B91E /* Constants.swift */; };
+		A82194F01D4962600040B91E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82194EF1D4962600040B91E /* NetworkManager.swift */; };
+		A82FC2BF1D566E95007F69BD /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2BE1D566E95007F69BD /* ChatListViewController.swift */; };
+		A82FC2C11D566FC5007F69BD /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C01D566FC5007F69BD /* ChatListCell.swift */; };
+		A82FC2C31D568346007F69BD /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C21D568346007F69BD /* RoundedImageView.swift */; };
+		A82FC2C51D5686D8007F69BD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C41D5686D8007F69BD /* InfoViewController.swift */; };
+		A82FC2C71D568758007F69BD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C61D568758007F69BD /* EditViewController.swift */; };
+		A832F4271D4425C100BA2B81 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */; };
+		A83924871D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
+		A83924881D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
+		A83924891D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
 		A8973A5A1D346D1A00F05B34 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8973A591D346D1A00F05B34 /* AuthorizationViewController.swift */; };
 		A8A13BFD1D4176920068CADE /* MatchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A13BFC1D4176920068CADE /* MatchImageViewController.swift */; };
+		A8A5DEDA1D48225A006AA5B8 /* StretchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5DED91D48225A006AA5B8 /* StretchyView.swift */; };
 		A8B1D2CC1D42A35D00A20593 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1D2CB1D42A35D00A20593 /* PageController.swift */; };
 		A8C46A091D34353400CD4A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A081D34353400CD4A93 /* AppDelegate.swift */; };
 		A8C46A0B1D34353400CD4A93 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A0A1D34353400CD4A93 /* LaunchViewController.swift */; };
@@ -23,8 +36,14 @@
 		A8C46A161D34353500CD4A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C46A141D34353500CD4A93 /* LaunchScreen.storyboard */; };
 		A8C46A211D34353500CD4A93 /* MercuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A201D34353500CD4A93 /* MercuryTests.swift */; };
 		A8C46A2C1D34353500CD4A93 /* MercuryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C46A2B1D34353500CD4A93 /* MercuryUITests.swift */; };
+		A8D911731D49D60700E5B9DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911721D49D60700E5B9DB /* User.swift */; };
+		A8D911751D49D62D00E5B9DB /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911741D49D62D00E5B9DB /* Resource.swift */; };
+		A8D911781D49D81100E5B9DB /* UIColor + Mercury.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */; };
+		A8D9117A1D49D86600E5B9DB /* String + ValidEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911791D49D86600E5B9DB /* String + ValidEmail.swift */; };
+		A8D9117C1D49E1FC00E5B9DB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D9117B1D49E1FC00E5B9DB /* UserService.swift */; };
 		A8F7024A1D359C8400007995 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F702491D359C8400007995 /* Protocols.swift */; };
-		A8F7024C1D359C8E00007995 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7024B1D359C8E00007995 /* Extensions.swift */; };
+		B8AD252CC4EB3937088FC4A5 /* Pods_Mercury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F897D88E7E51E20634DA89E8 /* Pods_Mercury.framework */; };
+		FB3055695222A15218DAA8A2 /* Pods_MercuryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEECD99164A69093D55B268 /* Pods_MercuryUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,13 +64,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03C57BD0E6E067EA6741908A /* Pods-Mercury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercury.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mercury/Pods-Mercury.debug.xcconfig"; sourceTree = "<group>"; };
+		25D04CCCA6A0232FF21F905C /* Pods_MercuryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercuryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61DB9AC397C31F2CE4ADCF20 /* Pods-MercuryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercuryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercuryUITests/Pods-MercuryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E030448356A8BFAD171D05E /* Pods-Mercury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercury.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mercury/Pods-Mercury.release.xcconfig"; sourceTree = "<group>"; };
+		9397D028CE5D879D7FA461A6 /* Pods-MercuryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercuryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercuryUITests/Pods-MercuryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A391727D417CECBD63F4811D /* Pods-MercuryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercuryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercuryTests/Pods-MercuryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A81FF2951D3DF1A700780666 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		A81FF2971D3DF1B600780666 /* InterestsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsCell.swift; sourceTree = "<group>"; };
 		A81FF2991D3DF1F100780666 /* UITableViewCell + Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Reusable.swift"; sourceTree = "<group>"; };
 		A81FF29B1D3DFBB000780666 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
-		A8973A541D346B9700F05B34 /* UIColor + mercury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + mercury.swift"; sourceTree = "<group>"; };
+		A82194EA1D4960360040B91E /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		A82194EC1D4961C30040B91E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A82194EF1D4962600040B91E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A82A0A511D4B2C2600F7F0E2 /* Mercury.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mercury.entitlements; sourceTree = "<group>"; };
+		A82FC2BE1D566E95007F69BD /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		A82FC2C01D566FC5007F69BD /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		A82FC2C21D568346007F69BD /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		A82FC2C41D5686D8007F69BD /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		A82FC2C61D568758007F69BD /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		A83924861D4A7EBB003438BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8973A591D346D1A00F05B34 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A8A13BFC1D4176920068CADE /* MatchImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchImageViewController.swift; sourceTree = "<group>"; };
+		A8A5DED91D48225A006AA5B8 /* StretchyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyView.swift; sourceTree = "<group>"; };
 		A8B1D2CB1D42A35D00A20593 /* PageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		A8C46A051D34353400CD4A93 /* Mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C46A081D34353400CD4A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +103,15 @@
 		A8C46A271D34353500CD4A93 /* MercuryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C46A2B1D34353500CD4A93 /* MercuryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryUITests.swift; sourceTree = "<group>"; };
 		A8C46A2D1D34353500CD4A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D911721D49D60700E5B9DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A8D911741D49D62D00E5B9DB /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Mercury.swift"; sourceTree = "<group>"; };
+		A8D911791D49D86600E5B9DB /* String + ValidEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + ValidEmail.swift"; sourceTree = "<group>"; };
+		A8D9117B1D49E1FC00E5B9DB /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A8F702491D359C8400007995 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		A8F7024B1D359C8E00007995 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B868D46FF3CC822BBD8A3938 /* Pods-MercuryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercuryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercuryTests/Pods-MercuryTests.release.xcconfig"; sourceTree = "<group>"; };
+		DFEECD99164A69093D55B268 /* Pods_MercuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F897D88E7E51E20634DA89E8 /* Pods_Mercury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8AD252CC4EB3937088FC4A5 /* Pods_Mercury.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4D0258B71EA7A94AC866E2 /* Pods_MercuryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,19 +135,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3055695222A15218DAA8A2 /* Pods_MercuryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C871CB72C3D0E5940FA832E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03C57BD0E6E067EA6741908A /* Pods-Mercury.debug.xcconfig */,
+				7E030448356A8BFAD171D05E /* Pods-Mercury.release.xcconfig */,
+				A391727D417CECBD63F4811D /* Pods-MercuryTests.debug.xcconfig */,
+				B868D46FF3CC822BBD8A3938 /* Pods-MercuryTests.release.xcconfig */,
+				61DB9AC397C31F2CE4ADCF20 /* Pods-MercuryUITests.debug.xcconfig */,
+				9397D028CE5D879D7FA461A6 /* Pods-MercuryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		584E52541F6CF3C367AB1A1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F897D88E7E51E20634DA89E8 /* Pods_Mercury.framework */,
+				25D04CCCA6A0232FF21F905C /* Pods_MercuryTests.framework */,
+				DFEECD99164A69093D55B268 /* Pods_MercuryUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A81FF2921D3DF14D00780666 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A81FF2951D3DF1A700780666 /* InfoCell.swift */,
 				A81FF2971D3DF1B600780666 /* InterestsCell.swift */,
+				A8A5DED91D48225A006AA5B8 /* StretchyView.swift */,
+				A82FC2C01D566FC5007F69BD /* ChatListCell.swift */,
+				A82FC2C21D568346007F69BD /* RoundedImageView.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A82194EE1D49620E0040B91E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A82194EF1D4962600040B91E /* NetworkManager.swift */,
+				A8D911741D49D62D00E5B9DB /* Resource.swift */,
+				A8D9117B1D49E1FC00E5B9DB /* UserService.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		A8973A561D346C9800F05B34 /* View Controller */ = {
@@ -113,6 +195,10 @@
 				A81FF29B1D3DFBB000780666 /* MatchViewController.swift */,
 				A8A13BFC1D4176920068CADE /* MatchImageViewController.swift */,
 				A8B1D2CB1D42A35D00A20593 /* PageController.swift */,
+				A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */,
+				A82FC2BE1D566E95007F69BD /* ChatListViewController.swift */,
+				A82FC2C41D5686D8007F69BD /* InfoViewController.swift */,
+				A82FC2C61D568758007F69BD /* EditViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -127,6 +213,7 @@
 		A8973A581D346CB300F05B34 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A8D911721D49D60700E5B9DB /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -138,6 +225,8 @@
 				A8C46A1F1D34353500CD4A93 /* MercuryTests */,
 				A8C46A2A1D34353500CD4A93 /* MercuryUITests */,
 				A8C46A061D34353400CD4A93 /* Products */,
+				3C871CB72C3D0E5940FA832E /* Pods */,
+				584E52541F6CF3C367AB1A1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,18 +243,21 @@
 		A8C46A071D34353400CD4A93 /* Mercury */ = {
 			isa = PBXGroup;
 			children = (
+				A82A0A511D4B2C2600F7F0E2 /* Mercury.entitlements */,
+				A8D911761D49D7E300E5B9DB /* Extensions */,
 				A8973A581D346CB300F05B34 /* Model */,
 				A81FF2921D3DF14D00780666 /* View */,
 				A8973A571D346CA200F05B34 /* View Model */,
 				A8973A561D346C9800F05B34 /* View Controller */,
 				A8F702481D359C6900007995 /* Utility */,
+				A82194EE1D49620E0040B91E /* Network */,
 				A8C46A081D34353400CD4A93 /* AppDelegate.swift */,
 				A8C46A0C1D34353400CD4A93 /* Main.storyboard */,
 				A8C46A121D34353500CD4A93 /* Assets.xcassets */,
 				A8C46A141D34353500CD4A93 /* LaunchScreen.storyboard */,
 				A8C46A171D34353500CD4A93 /* Info.plist */,
+				A83924861D4A7EBB003438BA /* GoogleService-Info.plist */,
 				A8C46A0F1D34353500CD4A93 /* Mercury.xcdatamodeld */,
-				A8973A541D346B9700F05B34 /* UIColor + mercury.swift */,
 			);
 			path = Mercury;
 			sourceTree = "<group>";
@@ -188,12 +280,22 @@
 			path = MercuryUITests;
 			sourceTree = "<group>";
 		};
+		A8D911761D49D7E300E5B9DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */,
+				A8D911791D49D86600E5B9DB /* String + ValidEmail.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		A8F702481D359C6900007995 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				A8F702491D359C8400007995 /* Protocols.swift */,
-				A8F7024B1D359C8E00007995 /* Extensions.swift */,
 				A81FF2991D3DF1F100780666 /* UITableViewCell + Reusable.swift */,
+				A82194EA1D4960360040B91E /* ErrorHandling.swift */,
+				A82194EC1D4961C30040B91E /* Constants.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -205,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8C46A301D34353500CD4A93 /* Build configuration list for PBXNativeTarget "Mercury" */;
 			buildPhases = (
+				ECB492245BA96C4EC2FDAB00 /* [CP] Check Pods Manifest.lock */,
 				A8C46A011D34353400CD4A93 /* Sources */,
 				A8C46A021D34353400CD4A93 /* Frameworks */,
 				A8C46A031D34353400CD4A93 /* Resources */,
+				724621E27EBA354C8D79D751 /* [CP] Embed Pods Frameworks */,
+				47A40D6782F7C5A99BDE2596 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,9 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8C46A331D34353500CD4A93 /* Build configuration list for PBXNativeTarget "MercuryTests" */;
 			buildPhases = (
+				564BF5A0D6D1F3C54CE72172 /* [CP] Check Pods Manifest.lock */,
 				A8C46A181D34353500CD4A93 /* Sources */,
 				A8C46A191D34353500CD4A93 /* Frameworks */,
 				A8C46A1A1D34353500CD4A93 /* Resources */,
+				9EF79C0695234C0018A0CA02 /* [CP] Embed Pods Frameworks */,
+				900318DCFE214F5EF5CC4FBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8C46A361D34353500CD4A93 /* Build configuration list for PBXNativeTarget "MercuryUITests" */;
 			buildPhases = (
+				63FB99CB8CAE8F147C142935 /* [CP] Check Pods Manifest.lock */,
 				A8C46A231D34353500CD4A93 /* Sources */,
 				A8C46A241D34353500CD4A93 /* Frameworks */,
 				A8C46A251D34353500CD4A93 /* Resources */,
+				3C3E8EE1C0A92F5D24BB8643 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,6 +379,14 @@
 						DevelopmentTeam = RA6B62BH5R;
 						DevelopmentTeamName = "Apple Inc. - STC Creative Services";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					A8C46A1B1D34353500CD4A93 = {
 						CreatedOnToolsVersion = 8.0;
@@ -312,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C46A161D34353500CD4A93 /* LaunchScreen.storyboard in Resources */,
+				A83924871D4A7EBB003438BA /* GoogleService-Info.plist in Resources */,
 				A8C46A131D34353500CD4A93 /* Assets.xcassets in Resources */,
 				A8C46A0E1D34353400CD4A93 /* Main.storyboard in Resources */,
 			);
@@ -321,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83924881D4A7EBB003438BA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,29 +448,166 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83924891D4A7EBB003438BA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C3E8EE1C0A92F5D24BB8643 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MercuryUITests/Pods-MercuryUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47A40D6782F7C5A99BDE2596 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mercury/Pods-Mercury-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		564BF5A0D6D1F3C54CE72172 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		63FB99CB8CAE8F147C142935 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		724621E27EBA354C8D79D751 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mercury/Pods-Mercury-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		900318DCFE214F5EF5CC4FBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MercuryTests/Pods-MercuryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF79C0695234C0018A0CA02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MercuryTests/Pods-MercuryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB492245BA96C4EC2FDAB00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8C46A011D34353400CD4A93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82FC2C71D568758007F69BD /* EditViewController.swift in Sources */,
+				A8D9117A1D49D86600E5B9DB /* String + ValidEmail.swift in Sources */,
+				A82194F01D4962600040B91E /* NetworkManager.swift in Sources */,
 				A81FF29C1D3DFBB000780666 /* MatchViewController.swift in Sources */,
+				A82194ED1D4961C30040B91E /* Constants.swift in Sources */,
+				A82FC2C51D5686D8007F69BD /* InfoViewController.swift in Sources */,
+				A82FC2BF1D566E95007F69BD /* ChatListViewController.swift in Sources */,
 				A8C46A0B1D34353400CD4A93 /* LaunchViewController.swift in Sources */,
 				A81FF29A1D3DF1F100780666 /* UITableViewCell + Reusable.swift in Sources */,
-				A8973A551D346B9700F05B34 /* UIColor + mercury.swift in Sources */,
 				A8A13BFD1D4176920068CADE /* MatchImageViewController.swift in Sources */,
+				A82FC2C31D568346007F69BD /* RoundedImageView.swift in Sources */,
 				A8B1D2CC1D42A35D00A20593 /* PageController.swift in Sources */,
+				A832F4271D4425C100BA2B81 /* EditProfileViewController.swift in Sources */,
+				A8A5DEDA1D48225A006AA5B8 /* StretchyView.swift in Sources */,
 				A8C46A111D34353500CD4A93 /* Mercury.xcdatamodeld in Sources */,
 				A8F7024A1D359C8400007995 /* Protocols.swift in Sources */,
 				A81FF2961D3DF1A700780666 /* InfoCell.swift in Sources */,
+				A8D911751D49D62D00E5B9DB /* Resource.swift in Sources */,
+				A82FC2C11D566FC5007F69BD /* ChatListCell.swift in Sources */,
+				A8D9117C1D49E1FC00E5B9DB /* UserService.swift in Sources */,
 				A8973A5A1D346D1A00F05B34 /* AuthorizationViewController.swift in Sources */,
 				A81FF2981D3DF1B600780666 /* InterestsCell.swift in Sources */,
+				A8D911781D49D81100E5B9DB /* UIColor + Mercury.swift in Sources */,
+				A82194EB1D4960360040B91E /* ErrorHandling.swift in Sources */,
 				A8C46A091D34353400CD4A93 /* AppDelegate.swift in Sources */,
-				A8F7024C1D359C8E00007995 /* Extensions.swift in Sources */,
+				A8D911731D49D60700E5B9DB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,12 +753,20 @@
 		};
 		A8C46A311D34353500CD4A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C57BD0E6E067EA6741908A /* Pods-Mercury.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mercury/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.Mercury;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -509,12 +774,20 @@
 		};
 		A8C46A321D34353500CD4A93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E030448356A8BFAD171D05E /* Pods-Mercury.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mercury/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.Mercury;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -522,6 +795,7 @@
 		};
 		A8C46A341D34353500CD4A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A391727D417CECBD63F4811D /* Pods-MercuryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MercuryTests/Info.plist;
@@ -535,6 +809,7 @@
 		};
 		A8C46A351D34353500CD4A93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B868D46FF3CC822BBD8A3938 /* Pods-MercuryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MercuryTests/Info.plist;
@@ -548,6 +823,7 @@
 		};
 		A8C46A371D34353500CD4A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61DB9AC397C31F2CE4ADCF20 /* Pods-MercuryUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MercuryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -560,6 +836,7 @@
 		};
 		A8C46A381D34353500CD4A93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9397D028CE5D879D7FA461A6 /* Pods-MercuryUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MercuryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
