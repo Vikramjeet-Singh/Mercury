@@ -270,7 +270,8 @@
                                                     <color key="titleColor" red="1" green="0.2156862745" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpl-3Z-nnI">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpl-3Z-nnI">
+                                                <frame key="frameInset" minX="257" width="58" height="50"/>
                                                 <state key="normal" title="High5">
                                                     <color key="titleColor" red="1" green="0.2156862745" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -441,12 +442,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat_1" translatesAutoresizingMaskIntoConstraints="NO" id="faI-Ob-vhD" userLabel="Profile Image" customClass="RoundedImageView" customModule="Mercury" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebE-fK-qw2" userLabel="Top View">
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat_1" translatesAutoresizingMaskIntoConstraints="NO" id="faI-Ob-vhD" userLabel="Profile Image" customClass="RoundedImageView" customModule="Mercury" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0RJ-MK-T2z"/>
+                                            <constraint firstAttribute="width" secondItem="faI-Ob-vhD" secondAttribute="height" multiplier="1:1" id="lrc-wk-oAR"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="faI-Ob-vhD" secondAttribute="height" multiplier="1:1" id="blo-ND-U1P"/>
-                                    <constraint firstAttribute="height" constant="80" id="fDN-sF-yQn"/>
+                                    <constraint firstItem="faI-Ob-vhD" firstAttribute="top" secondItem="ebE-fK-qw2" secondAttribute="top" constant="10" id="gnT-uQ-aNH"/>
+                                    <constraint firstAttribute="bottom" secondItem="faI-Ob-vhD" secondAttribute="bottom" constant="10" id="mPs-bB-TKq"/>
+                                    <constraint firstItem="faI-Ob-vhD" firstAttribute="centerX" secondItem="ebE-fK-qw2" secondAttribute="centerX" id="pR2-AO-1Kp"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="idh-eW-kZd">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="nUE-JQ-NSf" userLabel="Header View">
@@ -458,15 +469,24 @@
                                             <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="currentPageIndicatorTintColor" red="1" green="0.2156862745" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         </pageControl>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZz-xZ-sL2">
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="VZz-xZ-sL2" secondAttribute="height" multiplier="1:1" id="LAi-Aq-IYR"/>
+                                                <constraint firstAttribute="height" constant="30" id="WzL-Rr-zLx"/>
+                                            </constraints>
+                                            <state key="normal" backgroundImage="Settings"/>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="usy-Ur-1hV" secondAttribute="trailing" id="6u5-Lg-YhK"/>
                                         <constraint firstItem="usy-Ur-1hV" firstAttribute="top" secondItem="nUE-JQ-NSf" secondAttribute="top" id="8kC-Mx-RMg"/>
                                         <constraint firstItem="WgU-gh-65I" firstAttribute="centerX" secondItem="nUE-JQ-NSf" secondAttribute="centerX" id="Jc0-ll-lDi"/>
+                                        <constraint firstAttribute="bottom" secondItem="VZz-xZ-sL2" secondAttribute="bottom" constant="5" id="MCn-1o-GtV"/>
                                         <constraint firstAttribute="bottom" secondItem="usy-Ur-1hV" secondAttribute="bottom" constant="45" id="aZt-gn-TeW"/>
                                         <constraint firstItem="usy-Ur-1hV" firstAttribute="leading" secondItem="nUE-JQ-NSf" secondAttribute="leading" id="d2i-SS-sf2"/>
                                         <constraint firstAttribute="bottom" secondItem="WgU-gh-65I" secondAttribute="bottom" id="gBA-35-YTq"/>
+                                        <constraint firstAttribute="trailing" secondItem="VZz-xZ-sL2" secondAttribute="trailing" constant="5" id="s2y-iR-2ix"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -564,12 +584,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="faI-Ob-vhD" firstAttribute="centerX" secondItem="8Mw-lg-7J9" secondAttribute="centerX" id="3Tf-RG-sNq"/>
-                            <constraint firstItem="faI-Ob-vhD" firstAttribute="top" secondItem="gi8-d3-j5t" secondAttribute="bottom" constant="20" id="AEE-OU-uXy"/>
+                            <constraint firstItem="idh-eW-kZd" firstAttribute="top" secondItem="ebE-fK-qw2" secondAttribute="bottom" id="C6N-dd-abg"/>
+                            <constraint firstItem="ebE-fK-qw2" firstAttribute="top" secondItem="gi8-d3-j5t" secondAttribute="bottom" id="IAm-yn-HVj"/>
                             <constraint firstItem="idh-eW-kZd" firstAttribute="leading" secondItem="8Mw-lg-7J9" secondAttribute="leading" id="TNh-3O-a6Y"/>
                             <constraint firstAttribute="trailing" secondItem="idh-eW-kZd" secondAttribute="trailing" id="UZM-jS-RMc"/>
+                            <constraint firstItem="ebE-fK-qw2" firstAttribute="leading" secondItem="8Mw-lg-7J9" secondAttribute="leading" id="ZjC-Xf-E9B"/>
                             <constraint firstItem="cWF-w2-t8H" firstAttribute="top" secondItem="idh-eW-kZd" secondAttribute="bottom" id="Zjg-qD-ZOc"/>
-                            <constraint firstItem="idh-eW-kZd" firstAttribute="top" secondItem="faI-Ob-vhD" secondAttribute="bottom" constant="20" id="kD6-TK-mI6"/>
+                            <constraint firstAttribute="trailing" secondItem="ebE-fK-qw2" secondAttribute="trailing" id="lMK-H0-Yrx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -597,17 +618,17 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="REF-l7-0Av">
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-O8-5rl" userLabel="Name">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-O8-5rl" userLabel="Name">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ooo-7N-Rkr" userLabel="Age/Gender">
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="be0-G5-Xfp" userLabel="Age">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="be0-G5-Xfp" userLabel="Age">
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-C9-PiZ" userLabel="Male, Female">
+                                            <segmentedControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-C9-PiZ" userLabel="Male, Female">
                                                 <segments>
                                                     <segment title="Male"/>
                                                     <segment title="Female"/>
@@ -624,11 +645,11 @@
                                             <constraint firstAttribute="trailing" secondItem="vhh-C9-PiZ" secondAttribute="trailing" id="xIq-8x-2VG"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profession" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfK-Bv-Ol1" userLabel="Profession">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profession" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfK-Bv-Ol1" userLabel="Profession">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ethnicity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WA1-pP-S27" userLabel="Ethnicity">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ethnicity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WA1-pP-S27" userLabel="Ethnicity">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -840,5 +861,6 @@
         <image name="Cat_2" width="200" height="170"/>
         <image name="Logo" width="200" height="200"/>
         <image name="Sample" width="129" height="97"/>
+        <image name="Settings" width="128" height="128"/>
     </resources>
 </document>
