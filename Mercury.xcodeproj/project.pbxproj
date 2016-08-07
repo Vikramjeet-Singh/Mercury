@@ -25,6 +25,9 @@
 		A82FC2CD1D56F033007F69BD /* ProfileActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2CC1D56F033007F69BD /* ProfileActionCell.swift */; };
 		A82FC2CF1D570BF6007F69BD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2CE1D570BF6007F69BD /* ChatViewController.swift */; };
 		A82FC2D11D570C67007F69BD /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2D01D570C67007F69BD /* ChatCell.swift */; };
+		A82FC2D31D571439007F69BD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2D21D571439007F69BD /* Message.swift */; };
+		A82FC2D71D571D84007F69BD /* ProfileImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2D61D571D84007F69BD /* ProfileImagesViewController.swift */; };
+		A82FC2D91D571DD3007F69BD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2D81D571DD3007F69BD /* ImageViewController.swift */; };
 		A832F4271D4425C100BA2B81 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */; };
 		A83924871D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
 		A83924881D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
@@ -93,6 +96,9 @@
 		A82FC2CC1D56F033007F69BD /* ProfileActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileActionCell.swift; sourceTree = "<group>"; };
 		A82FC2CE1D570BF6007F69BD /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A82FC2D01D570C67007F69BD /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		A82FC2D21D571439007F69BD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A82FC2D61D571D84007F69BD /* ProfileImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImagesViewController.swift; sourceTree = "<group>"; };
+		A82FC2D81D571DD3007F69BD /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A83924861D4A7EBB003438BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8973A591D346D1A00F05B34 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +220,8 @@
 				A82FC2C41D5686D8007F69BD /* InfoViewController.swift */,
 				A82FC2C61D568758007F69BD /* EditViewController.swift */,
 				A82FC2CE1D570BF6007F69BD /* ChatViewController.swift */,
+				A82FC2D61D571D84007F69BD /* ProfileImagesViewController.swift */,
+				A82FC2D81D571DD3007F69BD /* ImageViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				A8D911721D49D60700E5B9DB /* User.swift */,
+				A82FC2D21D571439007F69BD /* Message.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -603,6 +612,7 @@
 				A82FC2C91D56DE2F007F69BD /* ProfileHeaderCell.swift in Sources */,
 				A82FC2CB1D56EFB5007F69BD /* ProfileRowCell.swift in Sources */,
 				A81FF29C1D3DFBB000780666 /* MatchViewController.swift in Sources */,
+				A82FC2D71D571D84007F69BD /* ProfileImagesViewController.swift in Sources */,
 				A82194ED1D4961C30040B91E /* Constants.swift in Sources */,
 				A82FC2C51D5686D8007F69BD /* InfoViewController.swift in Sources */,
 				A82FC2BF1D566E95007F69BD /* ChatListViewController.swift in Sources */,
@@ -610,11 +620,13 @@
 				A81FF29A1D3DF1F100780666 /* UITableViewCell + Reusable.swift in Sources */,
 				A8A13BFD1D4176920068CADE /* MatchImageViewController.swift in Sources */,
 				A82FC2C31D568346007F69BD /* RoundedImageView.swift in Sources */,
+				A82FC2D31D571439007F69BD /* Message.swift in Sources */,
 				A8B1D2CC1D42A35D00A20593 /* PageController.swift in Sources */,
 				A82FC2CD1D56F033007F69BD /* ProfileActionCell.swift in Sources */,
 				A832F4271D4425C100BA2B81 /* EditProfileViewController.swift in Sources */,
 				A8A5DEDA1D48225A006AA5B8 /* StretchyView.swift in Sources */,
 				A8C46A111D34353500CD4A93 /* Mercury.xcdatamodeld in Sources */,
+				A82FC2D91D571DD3007F69BD /* ImageViewController.swift in Sources */,
 				A8F7024A1D359C8400007995 /* Protocols.swift in Sources */,
 				A81FF2961D3DF1A700780666 /* InfoCell.swift in Sources */,
 				A82FC2D11D570C67007F69BD /* ChatCell.swift in Sources */,

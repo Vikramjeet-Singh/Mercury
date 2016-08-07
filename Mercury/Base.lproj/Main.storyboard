@@ -389,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEu-5J-i1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5092" y="-955.77211394302856"/>
+            <point key="canvasLocation" x="4958" y="-1454"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="jlV-0e-Bq5">
@@ -428,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qu-AV-5Cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5969" y="-956"/>
+            <point key="canvasLocation" x="5892" y="-1454"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Lkc-iG-inQ">
@@ -598,11 +598,12 @@
                         <outlet property="pageControl" destination="WgU-gh-65I" id="KAm-Ty-0YT"/>
                         <outlet property="profileImageView" destination="faI-Ob-vhD" id="sTZ-S5-ppZ"/>
                         <outlet property="tableView" destination="idh-eW-kZd" id="Maa-2r-66L"/>
+                        <segue destination="5gN-Nq-BMN" kind="presentation" identifier="ProfileImagesViewController" id="NIb-V3-KA6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4s-Y6-PsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5092" y="-234"/>
+            <point key="canvasLocation" x="4958" y="-617"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="wLQ-Pb-CsW">
@@ -669,7 +670,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50k-G7-40K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3933.5999999999999" y="279.31034482758622"/>
+            <point key="canvasLocation" x="3934" y="-121"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="cIe-Il-a3g">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0oQ-6V-quz" customClass="ImageViewController" customModule="Mercury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Ht-gy-SXy"/>
+                        <viewControllerLayoutGuide type="bottom" id="zqS-kW-04I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ujd-SO-bjp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat_1" translatesAutoresizingMaskIntoConstraints="NO" id="YIi-Ou-KyS"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YIi-Ou-KyS" firstAttribute="leading" secondItem="ujd-SO-bjp" secondAttribute="leading" id="GCq-62-cxd"/>
+                            <constraint firstItem="zqS-kW-04I" firstAttribute="top" secondItem="YIi-Ou-KyS" secondAttribute="bottom" id="Tdi-Vb-dxI"/>
+                            <constraint firstItem="YIi-Ou-KyS" firstAttribute="top" secondItem="4Ht-gy-SXy" secondAttribute="bottom" id="Wxs-cw-EC7"/>
+                            <constraint firstAttribute="trailing" secondItem="YIi-Ou-KyS" secondAttribute="trailing" id="wig-Vm-kUC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVb-pW-mHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4958" y="1170"/>
+        </scene>
+        <!--Profile Images-->
+        <scene sceneID="CfS-GD-Ror">
+            <objects>
+                <viewController storyboardIdentifier="ProfileImagesViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MM3-5w-6P8" customClass="ProfileImagesViewController" customModule="Mercury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XFV-G6-WzY"/>
+                        <viewControllerLayoutGuide type="bottom" id="9d7-qW-q50"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rCJ-xo-JJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-Vt-SgZ">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eLN-FQ-hyD">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ezM-pO-Zxh">
+                                        <frame key="frameInset" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YWP-Vt-SgZ" secondAttribute="trailing" id="4iZ-pD-z1K"/>
+                            <constraint firstItem="YWP-Vt-SgZ" firstAttribute="leading" secondItem="rCJ-xo-JJ2" secondAttribute="leading" id="I4U-WD-5ae"/>
+                            <constraint firstItem="9d7-qW-q50" firstAttribute="top" secondItem="YWP-Vt-SgZ" secondAttribute="bottom" id="UmN-fn-YM4"/>
+                            <constraint firstItem="YWP-Vt-SgZ" firstAttribute="top" secondItem="XFV-G6-WzY" secondAttribute="bottom" id="Vxz-1F-dxo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile Images" id="erp-xF-r8A"/>
+                    <connections>
+                        <segue destination="0oQ-6V-quz" kind="show" identifier="ImageViewController" id="x4m-mt-Huv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1v-qx-wuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5892" y="198"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="mWf-cD-fQ7">
@@ -708,7 +784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EWt-eo-gz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5969" y="571"/>
+            <point key="canvasLocation" x="6812" y="-618"/>
         </scene>
         <!--Authorization View Controller-->
         <scene sceneID="aAV-la-2xD">
@@ -799,7 +875,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sample" translatesAutoresizingMaskIntoConstraints="NO" id="0s1-Sc-z8a"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0s1-Sc-z8a"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -813,11 +889,12 @@
                     <size key="freeformSize" width="375" height="350"/>
                     <connections>
                         <outlet property="imageView" destination="0s1-Sc-z8a" id="gXT-ZL-xrN"/>
+                        <segue destination="0oQ-6V-quz" kind="show" identifier="ImageViewController" id="Xgn-pS-szI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjQ-06-FRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3934" y="-38"/>
+            <point key="canvasLocation" x="3934" y="199"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cL9-Kh-DGs">
@@ -853,14 +930,34 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLP-F2-h9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5968.8000000000002" y="-234.33283358320841"/>
+            <point key="canvasLocation" x="5892" y="-618"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sxX-F0-saZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5gN-Nq-BMN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XjD-gk-you">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MM3-5w-6P8" kind="relationship" relationship="rootViewController" id="gZb-LY-I5s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoB-lg-vgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4958" y="199"/>
         </scene>
     </scenes>
     <resources>
         <image name="Cat_1" width="200" height="133"/>
         <image name="Cat_2" width="200" height="170"/>
         <image name="Logo" width="200" height="200"/>
-        <image name="Sample" width="129" height="97"/>
         <image name="Settings" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xgn-pS-szI"/>
+    </inferredMetricsTieBreakers>
 </document>
