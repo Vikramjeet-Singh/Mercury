@@ -39,7 +39,12 @@ final class EditProfileViewController: UIViewController, UITableViewDelegate, UI
         static let count = 5
     }
 
-    @IBOutlet weak var profileImageView: RoundedImageView!
+    @IBOutlet weak var profileImageView: RoundedImageView! {
+        didSet {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EditProfileViewController.editProfileImage(_:)))
+            profileImageView.addGestureRecognizer(tapGesture)
+        }
+    }
     
     @IBOutlet private weak var containerView: UIView! {
         didSet {
@@ -81,6 +86,10 @@ extension EditProfileViewController {
     //Updates page according to tap on UIPageControl. One page at a time to either left or right
     func updatePage(_ pageControl: UIPageControl) {
         pageController.showController(index: pageControl.currentPage)
+    }
+    
+    func editProfileImage(_ gesture: UITapGestureRecognizer) {
+        print("Edit Profile Image pressed")
     }
     
 }
