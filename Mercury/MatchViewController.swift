@@ -26,9 +26,11 @@ final class MatchViewController: UIViewController, StretchableHeader {
     @IBOutlet private weak var header: UIView!
     @IBOutlet private weak var containerView: UIView! {
         didSet {
-            self.pageController = PageController(storyboard: self.storyboard!) { [unowned self] page in
-                self.pageControl.currentPage = page
-            }
+            self.pageController = PageController<MatchImageViewController>(storyboard: self.storyboard!,
+                                                                           contentList: ["Logo.png", "Cat_1.png", "Cat_2.png", "Logo.png", "Cat_1.png"],
+                                                                           updator: { [unowned self] page in
+                                                                                            self.pageControl.currentPage = page
+                                                                            })
             
             addChildViewController(pageController)
             pageController.view.frame = CGRect(x: 0, y: 0, width: containerView.frame.size.width, height: containerView.frame.size.height)

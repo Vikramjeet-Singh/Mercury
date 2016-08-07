@@ -8,7 +8,11 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+class InfoViewController: UIViewController, Pageable {
+    
+    var content: [String : AnyObject]?
+    
+    var pageIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +25,8 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setUp(content: [String : AnyObject], pageIndex: Int) {
+        self.content = content
+        self.pageIndex = pageIndex
     }
-    */
-
 }

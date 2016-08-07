@@ -136,7 +136,8 @@ private extension User {
 
 
 // TODO: Use Realm and then cache current user. Would have to change this class
-final class CurrentUser {
+// Can this be a protocol?
+struct CurrentUser {
     
     static var uid: String? {
         get {

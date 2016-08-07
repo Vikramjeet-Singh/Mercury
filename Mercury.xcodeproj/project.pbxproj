@@ -20,6 +20,11 @@
 		A82FC2C31D568346007F69BD /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C21D568346007F69BD /* RoundedImageView.swift */; };
 		A82FC2C51D5686D8007F69BD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C41D5686D8007F69BD /* InfoViewController.swift */; };
 		A82FC2C71D568758007F69BD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C61D568758007F69BD /* EditViewController.swift */; };
+		A82FC2C91D56DE2F007F69BD /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2C81D56DE2F007F69BD /* ProfileHeaderCell.swift */; };
+		A82FC2CB1D56EFB5007F69BD /* ProfileRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2CA1D56EFB5007F69BD /* ProfileRowCell.swift */; };
+		A82FC2CD1D56F033007F69BD /* ProfileActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2CC1D56F033007F69BD /* ProfileActionCell.swift */; };
+		A82FC2CF1D570BF6007F69BD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2CE1D570BF6007F69BD /* ChatViewController.swift */; };
+		A82FC2D11D570C67007F69BD /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FC2D01D570C67007F69BD /* ChatCell.swift */; };
 		A832F4271D4425C100BA2B81 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */; };
 		A83924871D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
 		A83924881D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
@@ -83,6 +88,11 @@
 		A82FC2C21D568346007F69BD /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		A82FC2C41D5686D8007F69BD /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A82FC2C61D568758007F69BD /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		A82FC2C81D56DE2F007F69BD /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		A82FC2CA1D56EFB5007F69BD /* ProfileRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRowCell.swift; sourceTree = "<group>"; };
+		A82FC2CC1D56F033007F69BD /* ProfileActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileActionCell.swift; sourceTree = "<group>"; };
+		A82FC2CE1D570BF6007F69BD /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A82FC2D01D570C67007F69BD /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A83924861D4A7EBB003438BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8973A591D346D1A00F05B34 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +183,10 @@
 				A8A5DED91D48225A006AA5B8 /* StretchyView.swift */,
 				A82FC2C01D566FC5007F69BD /* ChatListCell.swift */,
 				A82FC2C21D568346007F69BD /* RoundedImageView.swift */,
+				A82FC2C81D56DE2F007F69BD /* ProfileHeaderCell.swift */,
+				A82FC2CA1D56EFB5007F69BD /* ProfileRowCell.swift */,
+				A82FC2CC1D56F033007F69BD /* ProfileActionCell.swift */,
+				A82FC2D01D570C67007F69BD /* ChatCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -199,6 +213,7 @@
 				A82FC2BE1D566E95007F69BD /* ChatListViewController.swift */,
 				A82FC2C41D5686D8007F69BD /* InfoViewController.swift */,
 				A82FC2C61D568758007F69BD /* EditViewController.swift */,
+				A82FC2CE1D570BF6007F69BD /* ChatViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -585,6 +600,8 @@
 				A82FC2C71D568758007F69BD /* EditViewController.swift in Sources */,
 				A8D9117A1D49D86600E5B9DB /* String + ValidEmail.swift in Sources */,
 				A82194F01D4962600040B91E /* NetworkManager.swift in Sources */,
+				A82FC2C91D56DE2F007F69BD /* ProfileHeaderCell.swift in Sources */,
+				A82FC2CB1D56EFB5007F69BD /* ProfileRowCell.swift in Sources */,
 				A81FF29C1D3DFBB000780666 /* MatchViewController.swift in Sources */,
 				A82194ED1D4961C30040B91E /* Constants.swift in Sources */,
 				A82FC2C51D5686D8007F69BD /* InfoViewController.swift in Sources */,
@@ -594,11 +611,13 @@
 				A8A13BFD1D4176920068CADE /* MatchImageViewController.swift in Sources */,
 				A82FC2C31D568346007F69BD /* RoundedImageView.swift in Sources */,
 				A8B1D2CC1D42A35D00A20593 /* PageController.swift in Sources */,
+				A82FC2CD1D56F033007F69BD /* ProfileActionCell.swift in Sources */,
 				A832F4271D4425C100BA2B81 /* EditProfileViewController.swift in Sources */,
 				A8A5DEDA1D48225A006AA5B8 /* StretchyView.swift in Sources */,
 				A8C46A111D34353500CD4A93 /* Mercury.xcdatamodeld in Sources */,
 				A8F7024A1D359C8400007995 /* Protocols.swift in Sources */,
 				A81FF2961D3DF1A700780666 /* InfoCell.swift in Sources */,
+				A82FC2D11D570C67007F69BD /* ChatCell.swift in Sources */,
 				A8D911751D49D62D00E5B9DB /* Resource.swift in Sources */,
 				A82FC2C11D566FC5007F69BD /* ChatListCell.swift in Sources */,
 				A8D9117C1D49E1FC00E5B9DB /* UserService.swift in Sources */,
@@ -607,6 +626,7 @@
 				A8D911781D49D81100E5B9DB /* UIColor + Mercury.swift in Sources */,
 				A82194EB1D4960360040B91E /* ErrorHandling.swift in Sources */,
 				A8C46A091D34353400CD4A93 /* AppDelegate.swift in Sources */,
+				A82FC2CF1D570BF6007F69BD /* ChatViewController.swift in Sources */,
 				A8D911731D49D60700E5B9DB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

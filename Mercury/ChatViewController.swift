@@ -1,38 +1,18 @@
 //
-//  MatchImageViewController.swift
+//  ChatViewController.swift
 //  Mercury
 //
-//  Created by Vikramjeet Singh on 7/21/16.
+//  Created by Vikramjeet Singh on 8/6/16.
 //  Copyright © 2016 Vikramjeet Singh. All rights reserved.
 //
 
 import UIKit
 
-protocol Pageable {
-    associatedtype Content
-    
-    var content: Content? { get }
-    var pageIndex: Int { get }
-    
-    func setUp(content: Content, pageIndex: Int)
-}
+class ChatViewController: UIViewController {
 
-final class MatchImageViewController: UIViewController, Pageable {
-    
-    @IBOutlet private weak var imageView: UIImageView! {
-        didSet {
-            if let imageName = content {
-                imageView.image = UIImage(named: imageName)
-            }
-        }
-    }
-    
-    var content: String?
-    
-    var pageIndex: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -41,10 +21,6 @@ final class MatchImageViewController: UIViewController, Pageable {
         // Dispose of any resources that can be recreated.
     }
     
-    func setUp(content: String, pageIndex: Int) {
-        self.content = content
-        self.pageIndex = pageIndex
-    }
 
     /*
     // MARK: - Navigation

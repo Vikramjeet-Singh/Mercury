@@ -13,7 +13,9 @@ import UIKit
  */
 final class PageController<T where T: UIViewController, T: StoryboardIdentifiable, T: Pageable>: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate  {
     
-    var contentControllers: [T] = []
+    private var contentList: [T.Content] = []
+    private var contentControllers: [T] = []
+    
     var pageUpdator: (Int) -> () = {_ in }
     
     private var mainStoryboard: UIStoryboard?
@@ -24,30 +26,31 @@ final class PageController<T where T: UIViewController, T: StoryboardIdentifiabl
         fatalError("This controller should not be initialized from storyoard. Otherwise it should call initalize method")
     }
     
-    init(storyboard: UIStoryboard, transitionStyle style: UIPageViewControllerTransitionStyle = .scroll, navigationOrientation: UIPageViewControllerNavigationOrientation = .horizontal, options: [String : AnyObject]? = [:], updator: (Int) -> Void) {
-        mainStoryboard = storyboard
-        pageUpdator = updator
+    init(storyboard: UIStoryboard, contentList: [T.Content], transitionStyle style: UIPageViewControllerTransitionStyle = .scroll, navigationOrientation: UIPageViewControllerNavigationOrientation = .horizontal, options: [String : AnyObject]? = [:], updator: (Int) -> Void) {
+        self.mainStoryboard = storyboard
+        self.pageUpdator = updator
+        self.contentList = contentList
         super.init(transitionStyle: style, navigationOrientation: navigationOrientation)
         self.initialize()
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! MatchImageViewController).pageIndex
+        var index = (viewController as! T).pageIndex
         if index <= 0 { return nil }
         index -= 1
         return self.viewControllerAtIndex(index: index)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! MatchImageViewController).pageIndex
+        var index = (viewController as! T).pageIndex
         index += 1
-        if index >= 5 { return nil }
+        if index > contentList.count { return nil }
         return self.viewControllerAtIndex(index: index)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         guard completed else { return }
-        if let topViewController = pageViewController.viewControllers?.first as? MatchImageViewController {
+        if let topViewController = pageViewController.viewControllers?.first as? T {
             self.pageUpdator(topViewController.pageIndex)
         }
     }
@@ -67,13 +70,13 @@ private extension PageController {
         
         //set initial view controller in page controller
         let initalContentViewController = self.mainStoryboard?.instantiateViewController(withIdentifier: T.storyboardIdentifier) as! T
-        initalContentViewController.setUp(content: "Logo.png", pageIndex: 0)
+        initalContentViewController.setUp(content: contentList[0], pageIndex: 0)
         contentControllers.append(initalContentViewController)
         self.setViewControllers([initalContentViewController], direction: .forward, animated: true, completion: nil)
     }
     
     private func viewControllerAtIndex(index : Int) -> T? {
-        if((5 == 0) || (index >= 5)) {
+        if((contentList.count == 0) || (index >= contentList.count)) {
             return nil
         }
         // update previous page
@@ -86,12 +89,8 @@ private extension PageController {
         
         let pageContentViewController = self.mainStoryboard?.instantiateViewController(withIdentifier: T.storyboardIdentifier) as! T
         
-        //TODO: Need to be changed
-        if index % 2 == 0 {
-            pageContentViewController.setUp(content: "Logo.png", pageIndex: index)
-        } else {
-            pageContentViewController.setUp(content: "Cat_1.png", pageIndex: index)
-        }
+        pageContentViewController.setUp(content: contentList[index], pageIndex: index)
+
         contentControllers.append(pageContentViewController)
         return pageContentViewController
     }
