@@ -10,7 +10,7 @@ import Foundation
 
 enum Result<T> {
     case success(T)
-    case failure(ErrorProtocol)
+    case failure(Error)
 }
 
 extension Result {
@@ -23,7 +23,7 @@ extension Result {
         }
     }
     
-    var error: ErrorProtocol? {
+    var error: Error? {
         switch self {
         case .success(_):
             return nil
@@ -33,7 +33,7 @@ extension Result {
     }
 }
 
-enum MercuryError: ErrorProtocol {
+enum MercuryError: Error {
     case Empty
 }
 
@@ -46,8 +46,11 @@ extension MercuryError: CustomStringConvertible {
     }
 }
 
-enum AuthorizationError: ErrorProtocol {
+enum AuthorizationError: Error {
     case InvalidCredentials
+    case InvalidUsername
+    case InvalidEmail
+    case InvalidPassword
     case EmptyField
 }
 
@@ -56,6 +59,12 @@ extension AuthorizationError: CustomStringConvertible {
         switch self {
         case .InvalidCredentials:
             return "Invalid Email Address and/or Password provided"
+        case .InvalidUsername:
+            return "Invalid Username provided"
+        case .InvalidEmail:
+            return "Invalid Email Address provided"
+        case .InvalidPassword:
+            return "Invalid Password provided"
         case .EmptyField:
             return "Email and Password fields should not be empty"
         }

@@ -11,12 +11,14 @@ import Firebase
 
 /**
  NetworkManager class is a singleton service class that interacts with Firebase.
- All FIrebase callbacks are coming back on Main thread
+ All Firebase callbacks are coming back on Main thread
  */
 final class NetworkManager: Queuable {
     static let shared = NetworkManager()
     
     private let userService: UserService = UserService(withEndpoint: Endpoint.users.value)
+    
+    private let messageService: MessageService = MessageService(withEndpoint: Endpoint.messages.value)
     
     private(set) lazy var operationQueue: OperationQueue = {
         let queue = OperationQueue()
@@ -30,7 +32,7 @@ private extension NetworkManager {
     enum Endpoint {
         case base
         case users
-        case message
+        case messages
 //        case user(String)
         
         var dbBaseRef: FIRDatabaseReference {
@@ -43,7 +45,7 @@ private extension NetworkManager {
                 return dbBaseRef
             case .users:
                 return dbBaseRef.child("users")
-            case .message:
+            case .messages:
                 return dbBaseRef.child("messages")
 //            case .user(let id):
 //                return dbBaseRef.child("users").child(id)
@@ -71,7 +73,15 @@ extension NetworkManager {
     static func save(user: Resource<User>, completion: ResultBlock<User>? = nil) {
         NetworkManager.shared.userService.save(resource: user, completion: completion)
     }
-
+    
+    static func updateProfile(user: Resource<Bool>, completion: ResultBlock<Bool>? = nil) {
+        NetworkManager.shared.userService.updateProfile(resource: user, completion: completion)
+    }
+    
+    static func observeUsers(resource: Resource<[User]>, completion: ResultBlock<[User]>? = nil) {
+        NetworkManager.shared.userService.observe(resource: resource, completion: completion)
+    }
+    
 /*
     // MARK: Message network functions
     static func postJoke(resource: Resource<String>, completion: ResultBlock<String>? = nil) {
@@ -87,16 +97,22 @@ extension NetworkManager {
     //    static func load<T>(resource: Resource<T>, completion: ResultBlock<T>? = nil) {
     //        // fetch jokes
     //    }
-    
-    static func observe<T>(resource: Resource<T>, completion: ResultBlock<T>? = nil) {
+    */
+    static func observeMessages(resource: Resource<[Message]>, completion: ResultBlock<[Message]>? = nil) {
         NetworkManager.shared.enQueue({
-            Endpoint.message.value.observe(.value, with: { snapshot in
-                print("Snapshot is : \(snapshot)")
-                completion?(resource.result(snapshot, nil))
-            })
+//            Endpoint.message.value.observe(.value, with: { snapshot in
+//                print("Snapshot is : \(snapshot)")
+//                completion?(resource.result(snapshot, nil))
+//            })
+            
+                    NetworkManager.shared.messageService.observe(resource: resource, completion: completion)
         })
     }
- */
+    
+    static func observe<T>(resource: Resource<T>, completion: ResultBlock<[T]>? = nil) {
+        
+    }
+
 }
 
 protocol Queuable {
@@ -107,5 +123,29 @@ extension Queuable {
     func enQueue(_ opBlock: () -> Void) {
         let operation = BlockOperation(block: opBlock)
         operationQueue.addOperation(operation)
+    }
+}
+
+protocol ResourceObservable {
+    associatedtype ResType
+    
+    func observe(resource: Resource<ResType>, completion: ((Result<ResType>) -> Void)?)
+}
+
+
+protocol NetworkService: ResourceObservable, Queuable {
+    
+    var endpoint: FIRDatabaseReference { get }
+    init(withEndpoint endpoint: FIRDatabaseReference)
+}
+
+extension NetworkService {
+    typealias ResultBlock<ResType> = (Result<ResType>) -> Void
+    
+    func observe(resource: Resource<Self.ResType>, completion: ((Result<Self.ResType>) -> Void)?) {
+        self.endpoint.observe(.value, with: { snapshot in
+            print("Snapshot is : \(snapshot)")
+            completion?(resource.result(snapshot, nil))
+        })
     }
 }

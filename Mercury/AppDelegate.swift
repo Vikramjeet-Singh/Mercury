@@ -52,16 +52,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupAppearance() {
         
-        UITabBar.appearance().barTintColor = .mercury()
-        UITabBar.appearance().tintColor = .white()
+        UITabBar.appearance().barTintColor = .mercury
+        UITabBar.appearance().tintColor = .white
         UITabBar.appearance().barStyle = .black
         
         UINavigationBar.appearance().barStyle = .black
-        UINavigationBar.appearance().barTintColor = .mercury()
-        UINavigationBar.appearance().tintColor = .white()
+        UINavigationBar.appearance().barTintColor = .mercury
+        UINavigationBar.appearance().tintColor = .white
         
-        UIToolbar.appearance().barTintColor = .mercury()
-        UIToolbar.appearance().tintColor = .white()
+        UIToolbar.appearance().barTintColor = .mercury
+        UIToolbar.appearance().tintColor = .white
         UIToolbar.appearance().barStyle = .black
     }
 
@@ -88,9 +88,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                fatalError("Unresolved error \(error), \((error as NSError).userInfo)")
             }
-        })
+        })  
         return container
     }()
 

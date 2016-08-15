@@ -32,6 +32,9 @@
 		A83924871D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
 		A83924881D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
 		A83924891D4A7EBB003438BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A83924861D4A7EBB003438BA /* GoogleService-Info.plist */; };
+		A84B29FB1D5BC653003B233F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B29FA1D5BC653003B233F /* Reachability.m */; };
+		A88AA96F1D610D8200D64025 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88AA96E1D610D8200D64025 /* MessageService.swift */; };
+		A88AA9711D611B5500D64025 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88AA9701D611B5500D64025 /* Diff.swift */; };
 		A8973A5A1D346D1A00F05B34 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8973A591D346D1A00F05B34 /* AuthorizationViewController.swift */; };
 		A8A13BFD1D4176920068CADE /* MatchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A13BFC1D4176920068CADE /* MatchImageViewController.swift */; };
 		A8A5DEDA1D48225A006AA5B8 /* StretchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5DED91D48225A006AA5B8 /* StretchyView.swift */; };
@@ -47,8 +50,10 @@
 		A8D911731D49D60700E5B9DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911721D49D60700E5B9DB /* User.swift */; };
 		A8D911751D49D62D00E5B9DB /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911741D49D62D00E5B9DB /* Resource.swift */; };
 		A8D911781D49D81100E5B9DB /* UIColor + Mercury.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */; };
-		A8D9117A1D49D86600E5B9DB /* String + ValidEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911791D49D86600E5B9DB /* String + ValidEmail.swift */; };
+		A8D9117A1D49D86600E5B9DB /* String + Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911791D49D86600E5B9DB /* String + Validator.swift */; };
 		A8D9117C1D49E1FC00E5B9DB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D9117B1D49E1FC00E5B9DB /* UserService.swift */; };
+		A8E84A1E1D5B7A0E00C2048B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E84A1D1D5B7A0E00C2048B /* UserViewModel.swift */; };
+		A8E84A201D5B7A1C00C2048B /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E84A1F1D5B7A1C00C2048B /* MessageViewModel.swift */; };
 		A8F7024A1D359C8400007995 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F702491D359C8400007995 /* Protocols.swift */; };
 		B8AD252CC4EB3937088FC4A5 /* Pods_Mercury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F897D88E7E51E20634DA89E8 /* Pods_Mercury.framework */; };
 		FB3055695222A15218DAA8A2 /* Pods_MercuryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEECD99164A69093D55B268 /* Pods_MercuryUITests.framework */; };
@@ -101,6 +106,11 @@
 		A82FC2D81D571DD3007F69BD /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		A832F4261D4425C100BA2B81 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A83924861D4A7EBB003438BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A84B29F51D5BC5B9003B233F /* Mercury-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mercury-Bridging-Header.h"; sourceTree = "<group>"; };
+		A84B29FA1D5BC653003B233F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A84B29FD1D5BD7B0003B233F /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A88AA96E1D610D8200D64025 /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		A88AA9701D611B5500D64025 /* Diff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
 		A8973A591D346D1A00F05B34 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A8A13BFC1D4176920068CADE /* MatchImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchImageViewController.swift; sourceTree = "<group>"; };
 		A8A5DED91D48225A006AA5B8 /* StretchyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyView.swift; sourceTree = "<group>"; };
@@ -122,8 +132,10 @@
 		A8D911721D49D60700E5B9DB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A8D911741D49D62D00E5B9DB /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Mercury.swift"; sourceTree = "<group>"; };
-		A8D911791D49D86600E5B9DB /* String + ValidEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + ValidEmail.swift"; sourceTree = "<group>"; };
+		A8D911791D49D86600E5B9DB /* String + Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Validator.swift"; sourceTree = "<group>"; };
 		A8D9117B1D49E1FC00E5B9DB /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		A8E84A1D1D5B7A0E00C2048B /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A8E84A1F1D5B7A1C00C2048B /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		A8F702491D359C8400007995 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B868D46FF3CC822BBD8A3938 /* Pods-MercuryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercuryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercuryTests/Pods-MercuryTests.release.xcconfig"; sourceTree = "<group>"; };
 		DFEECD99164A69093D55B268 /* Pods_MercuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,9 +212,13 @@
 		A82194EE1D49620E0040B91E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A84B29FD1D5BD7B0003B233F /* Reachability.h */,
+				A84B29FA1D5BC653003B233F /* Reachability.m */,
 				A82194EF1D4962600040B91E /* NetworkManager.swift */,
 				A8D911741D49D62D00E5B9DB /* Resource.swift */,
 				A8D9117B1D49E1FC00E5B9DB /* UserService.swift */,
+				A84B29F51D5BC5B9003B233F /* Mercury-Bridging-Header.h */,
+				A88AA96E1D610D8200D64025 /* MessageService.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -238,6 +254,9 @@
 			children = (
 				A8D911721D49D60700E5B9DB /* User.swift */,
 				A82FC2D21D571439007F69BD /* Message.swift */,
+				A8E84A1D1D5B7A0E00C2048B /* UserViewModel.swift */,
+				A8E84A1F1D5B7A1C00C2048B /* MessageViewModel.swift */,
+				A88AA9701D611B5500D64025 /* Diff.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -308,7 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */,
-				A8D911791D49D86600E5B9DB /* String + ValidEmail.swift */,
+				A8D911791D49D86600E5B9DB /* String + Validator.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +421,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = RA6B62BH5R;
 						DevelopmentTeamName = "Apple Inc. - STC Creative Services";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -607,10 +627,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82FC2C71D568758007F69BD /* EditViewController.swift in Sources */,
-				A8D9117A1D49D86600E5B9DB /* String + ValidEmail.swift in Sources */,
+				A8D9117A1D49D86600E5B9DB /* String + Validator.swift in Sources */,
 				A82194F01D4962600040B91E /* NetworkManager.swift in Sources */,
+				A88AA9711D611B5500D64025 /* Diff.swift in Sources */,
 				A82FC2C91D56DE2F007F69BD /* ProfileHeaderCell.swift in Sources */,
 				A82FC2CB1D56EFB5007F69BD /* ProfileRowCell.swift in Sources */,
+				A8E84A201D5B7A1C00C2048B /* MessageViewModel.swift in Sources */,
+				A84B29FB1D5BC653003B233F /* Reachability.m in Sources */,
+				A8E84A1E1D5B7A0E00C2048B /* UserViewModel.swift in Sources */,
 				A81FF29C1D3DFBB000780666 /* MatchViewController.swift in Sources */,
 				A82FC2D71D571D84007F69BD /* ProfileImagesViewController.swift in Sources */,
 				A82194ED1D4961C30040B91E /* Constants.swift in Sources */,
@@ -624,6 +648,7 @@
 				A8B1D2CC1D42A35D00A20593 /* PageController.swift in Sources */,
 				A82FC2CD1D56F033007F69BD /* ProfileActionCell.swift in Sources */,
 				A832F4271D4425C100BA2B81 /* EditProfileViewController.swift in Sources */,
+				A88AA96F1D610D8200D64025 /* MessageService.swift in Sources */,
 				A8A5DEDA1D48225A006AA5B8 /* StretchyView.swift in Sources */,
 				A8C46A111D34353500CD4A93 /* Mercury.xcdatamodeld in Sources */,
 				A82FC2D91D571DD3007F69BD /* ImageViewController.swift in Sources */,
@@ -788,6 +813,7 @@
 			baseConfigurationReference = 03C57BD0E6E067EA6741908A /* Pods-Mercury.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -800,6 +826,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mercury/Mercury-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -809,6 +837,7 @@
 			baseConfigurationReference = 7E030448356A8BFAD171D05E /* Pods-Mercury.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Mercury/Mercury.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -821,6 +850,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.MercuryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mercury/Mercury-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

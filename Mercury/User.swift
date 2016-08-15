@@ -9,17 +9,22 @@
 import Foundation
 import Firebase
 
-final class User {
+final class User: Equatable  {
     private var firUser: FIRUser?
     
     private var _uid: String!
     private var _email: String!
     private var _name: String!
+    private var _age: String?
+    private var _interests: String?
+    private var _location: String?
+    private var _kids: String?
+    private var _pets: String?
     private var _photoURL: URL?
     
     // TODO: Use sparingly. Will take it out when firebase is gone
-    init?(firUsr: FIRUser) {
-        self.firUser = firUsr
+    init?(firUser: FIRUser) {
+        self.firUser = firUser
     }
     
     init?(dictionary: [String : AnyObject]) {
@@ -30,7 +35,30 @@ final class User {
         self._uid = uid
         self._email = email
         self._name = name
+        
+        self.initialize(dict: dictionary)
+    }
+    
+    init(id: String, dictionary: [String : AnyObject]) {
+        self._uid = id
         self._photoURL = dictionary["photoURL"] as? URL
+        
+        guard let email = dictionary["email"] as? String,
+            let name = dictionary["name"] as? String else { return }
+        
+        self._email = email
+        self._name = name
+        
+        self.initialize(dict: dictionary)
+    }
+    
+    private func initialize(dict: [String : AnyObject]) {
+        self._age = dict["age"] as? String
+        self._interests = dict["interests"] as? String
+        self._location = dict["location"] as? String
+        self._kids = dict["kids"] as? String
+        self._pets = dict["pets"] as? String
+        self._photoURL = dict["photoURL"] as? URL
     }
 }
 
@@ -53,7 +81,7 @@ extension User {
 }
 
 extension User {
-    static func createUser(email: String?, password: String?, username: String, completion: (Result<User>) -> Void) throws {
+    static func createUser(email: String, password: String, username: String, completion: (Result<User>) -> Void) throws {
         let createUser = try userResource(withEmail: email, password: password, username: username)
         // Make Server request
         NetworkManager.createUser(resource: createUser) { result in
@@ -61,7 +89,7 @@ extension User {
         }
     }
     
-    static func signIn(email: String?, password: String?, completion: (Result<User>) -> Void) throws {
+    static func signIn(email: String, password: String, completion: (Result<User>) -> Void) throws {
         let signIn = try userResource(withEmail: email, password: password)
         // Make Server request
         NetworkManager.signIn(resource: signIn) { result in
@@ -103,37 +131,66 @@ extension User {
             completion?(result)
         })
     }
-}
-
-private extension User {
-    static func userResource(withEmail email: String?,
-                             password: String?, username: String = "Undefined") throws -> Resource<User>
-    {
-        // Create actual resource
-        if let email = email, let password = password, email.isValidEmail() {
-            let data = ["email" :  email, "password" : password]
-            
-            return Resource<User>(method: .post(data: data), result: { (firUser, error) in
-                // Crash if user is not FIRUser
-                guard let firUsr = firUser as? FIRUser else { return .failure(error!) }
-                
-                // Create user model
-                let user = User(dictionary: ["id"    : firUsr.uid,
-                                             "email" : email,
-                                             "name"  : username])!
-                
-                // save user
-                User.save(user)
-                return .success(user)
-            })
-        }
-        throw AuthorizationError.InvalidCredentials
+    
+    static func update(userID id: String, withDictionary dict: [String : AnyObject], completion: ((Result<Bool>) -> Void)? = nil) throws {
+        guard !dict.isEmpty else { return }
+        
+        // Create mutable copy and add user id key
+        var dataDict = dict
+        dataDict["userID"] = id
+        
+        let userResource = Resource<Bool>(method: .post(data: dataDict), result: { _, error in
+            if let error = error { return .failure(error) }
+            return .success(true)
+        })
+        
+        // Make Server Request
+        NetworkManager.updateProfile(user: userResource, completion: { result in
+            completion?(result)
+        })
     }
 }
 
+private extension User {
+    static func userResource(withEmail emailAddr: String,
+                             password: String,
+                             username: String = "Undefined") throws -> Resource<User>
+    {
+        // Create actual resource
+        let email = try emailAddr.validatedEmail()
+        let password = try password.validatedPassword()
+        let username = try username.validatedUsername()
+        
+        let data = ["email" :  email, "password" : password]
+        
+        return Resource<User>(method: .post(data: data), result: { (firUser, error) in
+            // Crash if user is not FIRUser
+            guard let firUsr = firUser as? FIRUser else { return .failure(error!) }
+            
+            // Create user model
+            let user = User(dictionary: ["id"    : firUsr.uid,
+                                         "email" : email,
+                                         "name"  : username])!
+            
+            // save user
+            User.save(user)
+            return .success(user)
+        })
+    }
+}
 
-
-
+extension User {
+    
+    static let all = Resource<[User]>(method: .get(url: ""), result: { snapshot, error in
+        guard let snapshot = snapshot as? FIRDataSnapshot,
+            let snaps = snapshot.children.allObjects as? [FIRDataSnapshot]  else { return .failure(error!) }
+        
+        // Create user model
+        let users: [User] = snaps.flatMap { User(id: $0.key, dictionary: $0.value as! [String : AnyObject]) }
+        return .success(users)
+    })
+    
+}
 
 // TODO: Use Realm and then cache current user. Would have to change this class
 // Can this be a protocol?
@@ -182,4 +239,8 @@ struct CurrentUser {
         userDefaults.synchronize()
     }
     
+}
+
+func ==(_ lhs: User, _ rhs: User) -> Bool {
+    return lhs.uid == rhs.uid
 }

@@ -9,8 +9,11 @@
 import Foundation
 import Firebase
 
-final class UserService: Queuable {
-    private let endpoint: FIRDatabaseReference
+final class UserService: NetworkService {
+
+    typealias ResType = [User]
+    
+    let endpoint: FIRDatabaseReference
     private(set) lazy var operationQueue: OperationQueue = {
         let queue = OperationQueue()
         queue.name = "User Service queue"
@@ -66,7 +69,21 @@ extension UserService {
                                             completion?(resource.result(reference, error))
             })
         }
+    }
+    
+    func updateProfile(resource: Resource<Bool>, completion: ResultBlock<Bool>? = nil) {
+        guard let data = resource.data, let userID = data["userID"] as? String else { return }
 
+        // Create mutable copy and delete user id key
+        var dict = data
+        dict["userID"] = nil
+        
+        let dbReference = endpoint.child(userID)
+        enQueue {
+            dbReference.updateChildValues(dict, withCompletionBlock: { error, reference in
+                completion?(resource.result(reference, error))
+            })
+        }
     }
 
 }

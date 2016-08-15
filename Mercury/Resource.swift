@@ -16,7 +16,7 @@ enum RequestMethod {
 
 struct Resource<T> {
     let method: RequestMethod
-    let result: (AnyObject?, ErrorProtocol?) -> Result<T>
+    let result: (AnyObject?, Error?) -> Result<T>
 }
 
 extension Resource {

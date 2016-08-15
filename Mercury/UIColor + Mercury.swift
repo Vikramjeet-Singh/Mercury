@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-    static func mercury() -> UIColor {
+    static var mercury: UIColor {
         return UIColor(red: 255/255.0, green: 55/255.0, blue: 47/255.0, alpha: 1)
     }
 }
