@@ -1,5 +1,5 @@
 //
-//  UserViewModel.swift
+//  ListViewModel.swift
 //  Mercury
 //
 //  Created by Vikramjeet Singh on 8/10/16.

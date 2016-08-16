@@ -52,7 +52,7 @@
 		A8D911781D49D81100E5B9DB /* UIColor + Mercury.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */; };
 		A8D9117A1D49D86600E5B9DB /* String + Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D911791D49D86600E5B9DB /* String + Validator.swift */; };
 		A8D9117C1D49E1FC00E5B9DB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D9117B1D49E1FC00E5B9DB /* UserService.swift */; };
-		A8E84A1E1D5B7A0E00C2048B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E84A1D1D5B7A0E00C2048B /* UserViewModel.swift */; };
+		A8E84A1E1D5B7A0E00C2048B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E84A1D1D5B7A0E00C2048B /* ListViewModel.swift */; };
 		A8E84A201D5B7A1C00C2048B /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E84A1F1D5B7A1C00C2048B /* MessageViewModel.swift */; };
 		A8F7024A1D359C8400007995 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F702491D359C8400007995 /* Protocols.swift */; };
 		B8AD252CC4EB3937088FC4A5 /* Pods_Mercury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F897D88E7E51E20634DA89E8 /* Pods_Mercury.framework */; };
@@ -134,7 +134,7 @@
 		A8D911771D49D81100E5B9DB /* UIColor + Mercury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Mercury.swift"; sourceTree = "<group>"; };
 		A8D911791D49D86600E5B9DB /* String + Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Validator.swift"; sourceTree = "<group>"; };
 		A8D9117B1D49E1FC00E5B9DB /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		A8E84A1D1D5B7A0E00C2048B /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A8E84A1D1D5B7A0E00C2048B /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		A8E84A1F1D5B7A1C00C2048B /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		A8F702491D359C8400007995 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B868D46FF3CC822BBD8A3938 /* Pods-MercuryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercuryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MercuryTests/Pods-MercuryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 			children = (
 				A8D911721D49D60700E5B9DB /* User.swift */,
 				A82FC2D21D571439007F69BD /* Message.swift */,
-				A8E84A1D1D5B7A0E00C2048B /* UserViewModel.swift */,
+				A8E84A1D1D5B7A0E00C2048B /* ListViewModel.swift */,
 				A8E84A1F1D5B7A1C00C2048B /* MessageViewModel.swift */,
 				A88AA9701D611B5500D64025 /* Diff.swift */,
 			);
@@ -634,7 +634,7 @@
 				A82FC2CB1D56EFB5007F69BD /* ProfileRowCell.swift in Sources */,
 				A8E84A201D5B7A1C00C2048B /* MessageViewModel.swift in Sources */,
 				A84B29FB1D5BC653003B233F /* Reachability.m in Sources */,
-				A8E84A1E1D5B7A0E00C2048B /* UserViewModel.swift in Sources */,
+				A8E84A1E1D5B7A0E00C2048B /* ListViewModel.swift in Sources */,
 				A81FF29C1D3DFBB000780666 /* MatchViewController.swift in Sources */,
 				A82FC2D71D571D84007F69BD /* ProfileImagesViewController.swift in Sources */,
 				A82194ED1D4961C30040B91E /* Constants.swift in Sources */,
