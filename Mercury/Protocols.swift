@@ -106,8 +106,7 @@ protocol Injectable {
     func assertDependencies()
 }
 
-
-protocol ViewModel: Collection  {
+protocol ViewModelProtocol: Collection  {
     
     associatedtype Content
     
@@ -116,12 +115,11 @@ protocol ViewModel: Collection  {
     var didChangeCallback: ([Content]) -> Void { get set }
     
     func startObserving(forResource resource: Resource<[Content]>)
+
     mutating func update(_ content: [Content])
-    
-//    func diffed(with other: Self) -> Diff<Self>
 }
 
-extension ViewModel{
+extension ViewModelProtocol {
     
     var count: Int {
         return content.count
@@ -149,30 +147,8 @@ extension ViewModel{
     
 }
 
-extension ViewModel {
+extension ViewModelProtocol {
     mutating func update(_ content: [Content]) {
         self.content = content
     }
 }
-
-//extension ViewModel {
-//    
-//    mutating func setContent(_ content: [Content]) {
-//        self.content = content
-//    }
-//    
-//    func getContent() -> [Content] {
-//        return self.content
-//    }
-//    
-//    mutating func setChangeCallback(_ callback: ([Content]) -> Void) {
-//        self.didChangeCallback = callback
-//    }
-//    
-//    func getChangeCallback() -> ([Content]) -> Void {
-//        return self.didChangeCallback
-//    }
-//
-//    
-//}
- 

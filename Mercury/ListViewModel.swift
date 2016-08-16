@@ -8,6 +8,81 @@
 
 import Foundation
 
+
+protocol Observer {
+    static func observe(forResource resource: Resource<[Self]>, callback: ([Self]) -> Void)
+}
+
+struct ListViewModel<Content: Observer & Equatable>: ViewModelProtocol {
+    
+    var content: [Content] = []
+    var didChangeCallback: ([Content]) -> Void = { _ in }
+    
+    init(observeFor resource: Resource<[Content]>, callback: ([Content]) -> Void) {
+        didChangeCallback = callback
+        startObserving(forResource: resource)
+    }
+    
+    func startObserving(forResource resource: Resource<[Content]>) {
+        Content.observe(forResource: resource, callback: didChangeCallback)
+    }
+    
+    func diffed(with other: ListViewModel<Content>) -> Diff<Content> {
+        let change: DiffChange?
+        
+        if other.count > self.count {
+            let insertedIndices: [Int] = other[(self.count..<other.count)].enumerated().map({ index, _ in
+                return self.count + index
+            })
+            if insertedIndices.isEmpty {
+                change = nil
+            } else {
+                change = .inserted(at: insertedIndices)
+            }
+        } else if other.count < self.count {
+            let removedIndices: [Int] = self[(other.count..<self.count)].enumerated().map({ index, _ in
+                return other.count + index
+            })
+            if removedIndices.isEmpty {
+                change = nil
+            } else {
+                change = .removed(at: removedIndices)
+            }
+        } else if self.count == other.count {
+            let updatedIndices: [Int] = self.enumerated().flatMap({ index, obj in
+                if obj != other[index] { return index }
+                return nil
+            })
+            if updatedIndices.isEmpty {
+                change = nil
+            } else {
+                change = .updated(at: updatedIndices)
+            }
+        } else {
+            fatalError("How are jokes changing other than statements above?")
+        }
+        
+        return Diff(change: change, from: self, to: other)
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 struct UserViewModel: ViewModel {
     
     var content: [User] = []
@@ -25,6 +100,7 @@ struct UserViewModel: ViewModel {
             self.didChangeCallback(value)
         })
     }
+    
 
 }
 
@@ -69,3 +145,4 @@ extension UserViewModel {
     }
     
 }
+*/

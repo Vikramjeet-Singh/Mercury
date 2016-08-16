@@ -16,6 +16,10 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
             tableView.dataSource = self
         }
     }
+    
+    let userViewModel = ListViewModel(observeFor: User.all, callback: { result in
+        print("New users are : \(result)")
+    })
 
     override func viewDidLoad() {
         super.viewDidLoad()

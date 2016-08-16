@@ -192,6 +192,16 @@ extension User {
     
 }
 
+extension User: Observer {
+    static func observe(forResource resource: Resource<[User]>, callback: ([User]) -> Void) {
+        NetworkManager.observeUsers(resource: resource, completion: { result in
+            // check result and update users array
+            guard let value = result.value else { return print("Error while retrieving users") }
+            callback(value)
+        })
+    }
+}
+
 // TODO: Use Realm and then cache current user. Would have to change this class
 // Can this be a protocol?
 struct CurrentUser {

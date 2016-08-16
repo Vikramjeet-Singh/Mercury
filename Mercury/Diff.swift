@@ -14,13 +14,13 @@ enum DiffChange: Equatable {
     case updated(at: [Int])
 }
 
-struct Diff<Model: ViewModel> {
+struct Diff<T: Observer & Equatable> {
     
     let diffChange: DiffChange?
-    let from: Model
-    let to: Model
+    let from: ListViewModel<T>
+    let to: ListViewModel<T>
     
-    init(change: DiffChange?, from: Model, to: Model) {
+    init(change: DiffChange?, from: ListViewModel<T>, to: ListViewModel<T>) {
         self.diffChange = change
         self.from = from
         self.to = to

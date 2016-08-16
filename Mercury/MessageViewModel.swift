@@ -8,6 +8,7 @@
 
 import Foundation
 
+/*
 struct MessageViewModel: ViewModel {
     
     var content: [Message] = []
@@ -69,5 +70,5 @@ extension MessageViewModel {
     }
     
 }
-
+*/
 

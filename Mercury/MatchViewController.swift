@@ -73,10 +73,6 @@ final class MatchViewController: UIViewController, StretchableHeader {
         // Set up nav bar
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
-        
-        let vc = UserViewModel(changeCallback: { result in
-            print("Chnaged result : \(result)")
-        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
