@@ -11,22 +11,22 @@ import UIKit
 /**
  Generic PageController class that takes any view controller to be shown in UIPageViewController
  */
-final class PageController<T where T: UIViewController, T: StoryboardIdentifiable, T: Pageable>: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate  {
+final class PageController<T>: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate where T: UIViewController, T: StoryboardIdentifiable, T: Pageable  {
     
-    private var contentList: [T.Content] = []
-    private var contentControllers: [T] = []
+    fileprivate var contentList: [T.Content] = []
+    fileprivate var contentControllers: [T] = []
     
     var pageUpdator: (Int) -> () = {_ in }
     
-    private var mainStoryboard: UIStoryboard?
-    private var currentPage = 0
+    fileprivate var mainStoryboard: UIStoryboard?
+    fileprivate var currentPage = 0
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         fatalError("This controller should not be initialized from storyoard. Otherwise it should call initalize method")
     }
     
-    init(storyboard: UIStoryboard, contentList: [T.Content], transitionStyle style: UIPageViewControllerTransitionStyle = .scroll, navigationOrientation: UIPageViewControllerNavigationOrientation = .horizontal, options: [String : AnyObject]? = [:], updator: (Int) -> Void) {
+    init(storyboard: UIStoryboard, contentList: [T.Content], transitionStyle style: UIPageViewControllerTransitionStyle = .scroll, navigationOrientation: UIPageViewControllerNavigationOrientation = .horizontal, options: [String : AnyObject]? = [:], updator: @escaping (Int) -> Void) {
         self.mainStoryboard = storyboard
         self.pageUpdator = updator
         self.contentList = contentList
@@ -63,8 +63,8 @@ final class PageController<T where T: UIViewController, T: StoryboardIdentifiabl
     }
 }
 
-private extension PageController {
-    private func initialize() {
+extension PageController {
+    fileprivate func initialize() {
         self.delegate = self
         self.dataSource = self
         
@@ -75,7 +75,7 @@ private extension PageController {
         self.setViewControllers([initalContentViewController], direction: .forward, animated: true, completion: nil)
     }
     
-    private func viewControllerAtIndex(index : Int) -> T? {
+    fileprivate func viewControllerAtIndex(index : Int) -> T? {
         if((contentList.count == 0) || (index >= contentList.count)) {
             return nil
         }

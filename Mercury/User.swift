@@ -10,17 +10,17 @@ import Foundation
 import Firebase
 
 final class User: Equatable  {
-    private var firUser: FIRUser?
+    fileprivate var firUser: FIRUser?
     
-    private var _uid: String!
-    private var _email: String!
-    private var _name: String!
-    private var _age: String?
-    private var _interests: String?
-    private var _location: String?
-    private var _kids: String?
-    private var _pets: String?
-    private var _photoURL: URL?
+    fileprivate var _uid: String!
+    fileprivate var _email: String!
+    fileprivate var _name: String!
+    fileprivate var _age: String?
+    fileprivate var _interests: String?
+    fileprivate var _location: String?
+    fileprivate var _kids: String?
+    fileprivate var _pets: String?
+    fileprivate var _photoURL: URL?
     
     // TODO: Use sparingly. Will take it out when firebase is gone
     init?(firUser: FIRUser) {
@@ -81,7 +81,7 @@ extension User {
 }
 
 extension User {
-    static func createUser(email: String, password: String, username: String, completion: (Result<User>) -> Void) throws {
+    static func createUser(email: String, password: String, username: String, completion: @escaping (Result<User>) -> Void) throws {
         let createUser = try userResource(withEmail: email, password: password, username: username)
         // Make Server request
         NetworkManager.createUser(resource: createUser) { result in
@@ -89,7 +89,7 @@ extension User {
         }
     }
     
-    static func signIn(email: String, password: String, completion: (Result<User>) -> Void) throws {
+    static func signIn(email: String, password: String, completion: @escaping (Result<User>) -> Void) throws {
         let signIn = try userResource(withEmail: email, password: password)
         // Make Server request
         NetworkManager.signIn(resource: signIn) { result in
@@ -97,7 +97,7 @@ extension User {
         }
     }
     
-    static func signOut(completion: (Result<Void>) -> Void ) {
+    static func signOut(completion: @escaping (Result<Void>) -> Void ) {
         let signOut = Resource<Void>(method: .post(data: nil)) { _, error in
             if let error = error { return .failure(error) }
             
@@ -137,7 +137,7 @@ extension User {
         
         // Create mutable copy and add user id key
         var dataDict = dict
-        dataDict["userID"] = id
+        dataDict["userID"] = id as NSString
         
         let userResource = Resource<Bool>(method: .post(data: dataDict), result: { _, error in
             if let error = error { return .failure(error) }
@@ -157,6 +157,7 @@ private extension User {
                              username: String = "Undefined") throws -> Resource<User>
     {
         // Create actual resource
+        
         let email = try emailAddr.validatedEmail()
         let password = try password.validatedPassword()
         let username = try username.validatedUsername()
@@ -168,9 +169,12 @@ private extension User {
             guard let firUsr = firUser as? FIRUser else { return .failure(error!) }
             
             // Create user model
-            let user = User(dictionary: ["id"    : firUsr.uid,
-                                         "email" : email,
-                                         "name"  : username])!
+            
+            // TODO: Fix this string conversion. I don't want to explicitly bridge string to NSString
+
+            let user = User(dictionary: ["id"    : firUsr.uid as NSString,
+                                         "email" : email as NSString,
+                                         "name"  : username as NSString])!
             
             // save user
             User.save(user)
@@ -193,7 +197,7 @@ extension User {
 }
 
 extension User: Observer {
-    static func observe(forResource resource: Resource<[User]>, callback: ([User]) -> Void) {
+    static func observe(forResource resource: Resource<[User]>, callback: @escaping ([User]) -> Void) {
         NetworkManager.observeUsers(resource: resource, completion: { result in
             // check result and update users array
             guard let value = result.value else { return print("Error while retrieving users") }

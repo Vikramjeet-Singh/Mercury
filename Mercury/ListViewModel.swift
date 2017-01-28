@@ -10,7 +10,7 @@ import Foundation
 
 
 protocol Observer {
-    static func observe(forResource resource: Resource<[Self]>, callback: ([Self]) -> Void)
+    static func observe(forResource resource: Resource<[Self]>, callback: @escaping ([Self]) -> Void)
 }
 
 struct ListViewModel<Content: Observer & Equatable>: ViewModelProtocol {
@@ -18,7 +18,7 @@ struct ListViewModel<Content: Observer & Equatable>: ViewModelProtocol {
     var content: [Content] = []
     var didChangeCallback: ([Content]) -> Void = { _ in }
     
-    init(observeFor resource: Resource<[Content]>, callback: ([Content]) -> Void) {
+    init(observeFor resource: Resource<[Content]>, callback: @escaping ([Content]) -> Void) {
         didChangeCallback = callback
         startObserving(forResource: resource)
     }

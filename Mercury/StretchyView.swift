@@ -33,7 +33,7 @@ extension StretchyView {
     /**
      This method sets the tableview's inital contentInset and contentOffset to incorporate header on top. It also removes tableview's header (set in storyboard) so that we could mange its frame otherwise tableview does it on its own
      */
-    private func initialize() {
+    fileprivate func initialize() {
         tableView.tableHeaderView = nil
         tableView.addSubview(stretchyHeader)
         

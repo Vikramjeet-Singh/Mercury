@@ -44,7 +44,7 @@ extension ViewType: CustomStringConvertible {
 
 final class AuthorizationViewController: UIViewController, AuthorizableView {
     private(set) var authView: ViewType = .logIn
-    private var dismissCallback: () -> Void = { _ in }
+    fileprivate var dismissCallback: () -> Void = { _ in }
     
     //Animate view to adjust to keyboard
     lazy var animate: (Double, UInt, CGRect) -> () = {
@@ -57,16 +57,16 @@ final class AuthorizationViewController: UIViewController, AuthorizableView {
         })
     }
     
-    @IBOutlet private weak var logo: RoundedImageView!
+    @IBOutlet fileprivate weak var logo: RoundedImageView!
     
-    @IBOutlet private weak var username: UITextField!
-    @IBOutlet private weak var password: UITextField!
-    @IBOutlet private weak var email: UITextField!
+    @IBOutlet fileprivate weak var username: UITextField!
+    @IBOutlet fileprivate weak var password: UITextField!
+    @IBOutlet fileprivate weak var email: UITextField!
 
     @IBOutlet weak private var logIn: UIButton!
     @IBOutlet weak private var recover: UIButton!
     
-    static func create(viewType: ViewType, dismissCallback: () -> Void) -> AuthorizationViewController {
+    static func create(viewType: ViewType, dismissCallback: @escaping () -> Void) -> AuthorizationViewController {
         let authVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: AuthorizationViewController.storyboardIdentifier) as! AuthorizationViewController
         authVC.authView = viewType
         authVC.dismissCallback = dismissCallback
@@ -114,8 +114,8 @@ final class AuthorizationViewController: UIViewController, AuthorizableView {
     }
 }
 
-private extension AuthorizationViewController {
-    private func logIn(_ sender: UIButton) {
+extension AuthorizationViewController {
+    fileprivate func logIn(_ sender: UIButton) {
         dismissKeyboard()
         
         guard let email = self.email.text,
@@ -136,7 +136,7 @@ private extension AuthorizationViewController {
         }
     }
     
-    private func signUp(_ sender: UIButton) {
+    fileprivate func signUp(_ sender: UIButton) {
         dismissKeyboard()
         
         guard let email = self.email.text,

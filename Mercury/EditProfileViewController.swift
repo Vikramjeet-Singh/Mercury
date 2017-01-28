@@ -49,7 +49,7 @@ final class EditProfileViewController: UIViewController, UITableViewDelegate, UI
     @IBOutlet private weak var containerView: UIView! {
         didSet {
             pageController = PageController<InfoViewController>(storyboard: self.storyboard!,
-                                                                     contentList: [["hey" : "wass ur name"], ["hi" : "why should i tell u?"]], updator: { [unowned self] page in
+                                                                     contentList: [["hey" : "wass ur name" as NSString], ["hi" : "why should i tell u?" as NSString]], updator: { [unowned self] page in
                                                                             self.pageControl.currentPage = page
                                                                         })
 

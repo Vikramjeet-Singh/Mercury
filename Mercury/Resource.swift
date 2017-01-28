@@ -11,16 +11,16 @@ import Firebase
 
 enum RequestMethod {
     case get(url: String)
-    case post(data: [String : AnyObject]?)
+    case post(data: [String : Any]?)
 }
 
 struct Resource<T> {
     let method: RequestMethod
-    let result: (AnyObject?, Error?) -> Result<T>
+    let result: (Any?, Error?) -> Result<T>
 }
 
 extension Resource {
-    var data: [String : AnyObject]? {
+    var data: [String : Any]? {
         switch self.method {
         case .post(let data):
             return data

@@ -16,9 +16,9 @@ import Firebase
 final class NetworkManager: Queuable {
     static let shared = NetworkManager()
     
-    private let userService: UserService = UserService(withEndpoint: Endpoint.users.value)
+    fileprivate let userService: UserService = UserService(withEndpoint: Endpoint.users.value)
     
-    private let messageService: MessageService = MessageService(withEndpoint: Endpoint.messages.value)
+    fileprivate let messageService: MessageService = MessageService(withEndpoint: Endpoint.messages.value)
     
     private(set) lazy var operationQueue: OperationQueue = {
         let queue = OperationQueue()
@@ -120,7 +120,7 @@ protocol Queuable {
 }
 
 extension Queuable {
-    func enQueue(_ opBlock: () -> Void) {
+    func enQueue(_ opBlock: @escaping () -> Void) {
         let operation = BlockOperation(block: opBlock)
         operationQueue.addOperation(operation)
     }

@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 struct Message: Equatable {
-    private var id: String
+    fileprivate var id: String
 }
 
 extension Message {
@@ -25,8 +25,8 @@ extension Message {
 }
 
 extension Message: Observer {
-    static func observe(forResource resource: Resource<[Message]>, callback: ([Message]) -> Void) {
-        NetworkManager.observeMessages(resource: resource, completion: { result in
+    static func observe(forResource resource: Resource<[Message]>, callback: @escaping ([Message]) -> Void) {
+        NetworkManager.observeMessages(resource: resource, completion: { [callback] result in
             // check result and update users array
             guard let value = result.value else { return print("Error while retrieving users") }
             callback(value)

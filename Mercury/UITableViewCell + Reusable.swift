@@ -16,7 +16,7 @@ protocol ReusableView {}
 
 extension ReusableView {
     static var reusableIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
@@ -31,7 +31,7 @@ protocol Segueable {}
 
 extension Segueable where Self: UIViewController {
     static var segueIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
@@ -44,7 +44,7 @@ extension UIViewController: Segueable {}
 
 extension StoryboardIdentifiable where Self: UIViewController {
     static var storyboardIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
